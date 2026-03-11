@@ -111,25 +111,40 @@ section{padding:88px 5%}
 #digital-card{background:var(--off)}
 .dcard-wrap{display:flex;flex-direction:column;align-items:center;gap:2rem}
 .dcard-lbl{font-size:.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
-.biz-card{width:680px;max-width:100%;height:360px;background:linear-gradient(135deg,#162847 0%,#1e3a5f 50%,#162847 100%);border-radius:22px;display:flex;overflow:hidden;box-shadow:0 28px 72px rgba(9,23,45,.35);position:relative}
-.biz-pat{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:22px 22px}
-.biz-bar{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#c49a3c,#f0cc6a,#c49a3c);border-radius:22px 0 0 22px}
-.biz-l{width:200px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;padding:1.8rem 1rem;border-right:1px solid rgba(255,255,255,.08);position:relative;z-index:1}
-.biz-mono{width:86px;height:86px;border-radius:50%;background:linear-gradient(135deg,#3a7ee0,#0d2550);border:2.5px solid rgba(196,154,60,.55);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:2.2rem;font-weight:700;color:#fff}
-.biz-icai{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-align:center;line-height:1.7}
-.biz-r{flex:1;padding:1.8rem 1.8rem 1.8rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:1}
-.biz-badge{display:inline-flex;align-items:center;background:rgba(196,154,60,.18);border:1px solid rgba(196,154,60,.5);color:#f0cc6a;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .75rem;border-radius:100px;margin-bottom:.75rem;width:fit-content}
-.biz-name{font-family:var(--serif);font-weight:700;font-size:1.5rem;color:#fff;line-height:1.12;white-space:nowrap}
-.biz-role-txt{font-size:.72rem;color:rgba(255,255,255,.55);margin-top:.35rem}
-.biz-div{width:48px;height:3px;background:linear-gradient(90deg,#c49a3c,#f0cc6a);border-radius:2px;margin:.85rem 0}
-.biz-contacts{display:flex;flex-direction:column;gap:.55rem}
-.biz-row{display:flex;align-items:center;gap:.6rem;font-size:.76rem;color:rgba(255,255,255,.8)}
-.biz-ico{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(255,255,255,.12)}
-.biz-ico.li{background:rgba(10,102,194,.75)}
-.biz-bot{display:flex;justify-content:space-between;align-items:flex-end}
-.biz-tags{display:flex;gap:.35rem;flex-wrap:wrap}
-.biz-etag{font-size:.62rem;font-weight:600;color:rgba(255,255,255,.65);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:.2rem .55rem;border-radius:100px}
-.biz-site{font-family:var(--serif);font-size:.7rem;color:rgba(255,255,255,.3)}
+/* ── Portrait Digital Card ── */
+.vcard{width:380px;max-width:100%;border-radius:28px;overflow:visible;position:relative;box-shadow:0 32px 80px rgba(13,31,60,.28);filter:drop-shadow(0 4px 24px rgba(196,154,60,.12))}
+.vcard-top{background:linear-gradient(160deg,#0d1f3c 0%,#1a3560 60%,#0f2848 100%);border-radius:28px 28px 0 0;padding:2.2rem 2rem 0;position:relative;overflow:hidden;min-height:200px}
+.vcard-top-pat{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:20px 20px;pointer-events:none}
+.vcard-top-glow{position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(42,109,224,.25),transparent 70%);pointer-events:none}
+.vcard-gold-bar{position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c49a3c,#f0cc6a,#c49a3c)}
+.vcard-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(196,154,60,.18);border:1px solid rgba(196,154,60,.45);color:#f0cc6a;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.28rem .8rem;border-radius:100px;margin-bottom:1rem}
+.vcard-name{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:#fff;line-height:1.12;margin-bottom:.3rem}
+.vcard-title{font-size:.75rem;color:rgba(255,255,255,.55);line-height:1.5;margin-bottom:1.4rem}
+/* Photo circle sits at the bottom edge of vcard-top, overlapping into vcard-bot */
+.vcard-photo-wrap{display:flex;justify-content:center;margin-bottom:-56px;position:relative;z-index:2}
+.vcard-photo-ring{width:112px;height:112px;border-radius:50%;background:linear-gradient(135deg,#f0cc6a,#c49a3c);padding:3px;box-shadow:0 8px 28px rgba(0,0,0,.35)}
+.vcard-photo-inner{width:100%;height:100%;border-radius:50%;overflow:hidden;background:#1a3560}
+.vcard-photo-inner img{width:100%;height:100%;object-fit:cover;object-position:center top}
+/* Bottom white panel */
+.vcard-bot{background:#fff;border-radius:0 0 28px 28px;padding:68px 1.8rem 1.8rem}
+.vcard-bot-name{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--navy);text-align:center;margin-bottom:.2rem}
+.vcard-bot-role{font-size:.75rem;color:var(--muted);text-align:center;margin-bottom:.3rem}
+.vcard-divider{width:40px;height:2.5px;background:linear-gradient(90deg,#c49a3c,#f0cc6a);border-radius:2px;margin:.75rem auto}
+.vcard-rows{display:flex;flex-direction:column;gap:.65rem;margin-bottom:1.2rem}
+.vcard-row{display:flex;align-items:center;gap:.85rem;padding:.65rem .9rem;background:var(--off);border:1px solid var(--border);border-radius:12px;cursor:pointer;transition:all .2s;text-decoration:none}
+.vcard-row:hover{border-color:var(--accent);background:#eef2fc;transform:translateX(3px)}
+.vcard-row-ico{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.vr-ph{background:rgba(42,109,224,.1)}
+.vr-em{background:rgba(196,154,60,.12)}
+.vr-li{background:rgba(10,102,194,.12)}
+.vcard-row-lbl{font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.vcard-row-val{font-size:.82rem;font-weight:600;color:var(--navy)}
+.vcard-tags{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.2rem}
+.vcard-tag{font-size:.65rem;font-weight:600;color:var(--accent);background:rgba(42,109,224,.08);border:1px solid rgba(42,109,224,.18);padding:.22rem .65rem;border-radius:100px}
+.vcard-save{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;background:var(--navy);color:#fff;border:none;border-radius:12px;padding:.9rem;font-family:var(--sans);font-size:.875rem;font-weight:700;cursor:pointer;transition:all .22s;margin-bottom:.75rem}
+.vcard-save:hover{background:var(--accent);transform:translateY(-2px)}
+.vcard-site{text-align:center;font-size:.7rem;color:var(--muted)}
+.vcard-site strong{color:var(--navy)}
 .dcard-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
 .dl-status{font-size:.8rem;color:var(--muted);text-align:center;min-height:1.2rem;margin-top:.5rem}
 .dl-status.ok{color:#16a34a}.dl-status.err{color:#dc2626}
@@ -242,14 +257,79 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
   .hbg{display:flex}
   .hero-l{padding:40px 5%}
   .hero-stats{flex-direction:column;gap:1rem}
-  .biz-card{width:100%;height:auto;flex-direction:column}
-  .biz-l{width:100%;flex-direction:row;gap:1.2rem;justify-content:flex-start;border-right:none;border-bottom:1px solid rgba(255,255,255,.06);padding:1.5rem 1.8rem}
-  .biz-name{font-size:1.25rem;white-space:normal}
+  .vcard{width:340px;}
   #artOv{padding:0}
   #artBox{border-radius:0;min-height:100vh}
   .art-hdr{padding:1.6rem 1.2rem 1.4rem}
   .art-body{padding:1.6rem 1.2rem 0}
   .art-cta{padding:1.2rem;flex-direction:column}
+}
+
+/* FINANCE TOOLS */
+#finance-tools{background:var(--navy)}
+.ft-tabs{display:flex;gap:.5rem;margin-bottom:2.5rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.35rem;width:fit-content;flex-wrap:wrap}
+.ft-tab{font-family:var(--sans);font-size:.8rem;font-weight:600;padding:.6rem 1.3rem;border-radius:8px;border:none;background:transparent;color:rgba(255,255,255,.5);cursor:pointer;transition:all .22s;letter-spacing:.02em;white-space:nowrap}
+.ft-tab.active{background:#fff;color:var(--navy);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.ft-tab:hover:not(.active){color:rgba(255,255,255,.85)}
+.calc-panel{display:none}.calc-panel.active{display:block}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.calc-inputs{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:2rem}
+.calc-result{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:2rem;display:flex;flex-direction:column;gap:1.4rem}
+.calc-field{margin-bottom:1.1rem}
+.calc-field:last-of-type{margin-bottom:0}
+.calc-lbl{display:block;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase;margin-bottom:.4rem}
+.calc-in{width:100%;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:9px;padding:.7rem 1rem;font-family:var(--sans);font-size:.95rem;color:#fff;outline:none;transition:border-color .2s}
+.calc-in::placeholder{color:rgba(255,255,255,.25)}
+.calc-in:focus{border-color:rgba(196,154,60,.7);background:rgba(255,255,255,.12)}
+.calc-in-prefix{position:relative}
+.calc-in-prefix span{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.45);font-size:.95rem;pointer-events:none}
+.calc-in-prefix input{padding-left:1.8rem}
+.calc-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:.5rem;background:var(--gold);color:#fff;border:none;border-radius:9px;padding:.85rem 1.5rem;font-family:var(--sans);font-size:.9rem;font-weight:700;cursor:pointer;transition:all .22s;margin-top:1.4rem}
+.calc-btn:hover{background:var(--gold-l);transform:translateY(-2px)}
+.res-metric{text-align:center}
+.res-value{font-family:var(--serif);font-size:3.2rem;font-weight:700;color:#fff;line-height:1;margin-bottom:.3rem}
+.res-value.positive{color:#4ade80}
+.res-value.negative{color:#f87171}
+.res-value.neutral{color:#f0cc6a}
+.res-unit{font-size:.75rem;font-weight:600;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.1em}
+.res-divider{height:1px;background:rgba(255,255,255,.1)}
+.res-row{display:flex;justify-content:space-between;align-items:center;font-size:.88rem}
+.res-row-lbl{color:rgba(255,255,255,.45)}
+.res-row-val{font-weight:600;color:rgba(255,255,255,.85)}
+.res-insight{background:rgba(196,154,60,.12);border:1px solid rgba(196,154,60,.25);border-radius:10px;padding:.85rem 1.1rem;font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.55}
+.res-insight strong{color:#f0cc6a}
+.res-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;min-height:180px;opacity:.35}
+.res-empty svg{opacity:.5}
+.res-empty p{font-size:.82rem;color:rgba(255,255,255,.5);text-align:center}
+
+/* EXCEL DOWNLOADS */
+#excel-downloads{background:var(--off)}
+.xl-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.xl-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.8rem;display:flex;flex-direction:column;gap:1rem;transition:all .28s}
+.xl-card:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.xl-card-top{display:flex;align-items:flex-start;gap:1rem}
+.xl-icon{width:52px;height:52px;border-radius:12px;background:#f0faf3;border:1px solid #bbf0cc;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.xl-card-info h3{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.3rem}
+.xl-card-info p{font-size:.82rem;color:var(--muted);line-height:1.6}
+.xl-tabs{display:flex;gap:.4rem;flex-wrap:wrap}
+.xl-tab{font-size:.68rem;font-weight:600;color:#16a34a;background:rgba(22,163,74,.08);border:1px solid rgba(22,163,74,.2);padding:.18rem .55rem;border-radius:100px}
+.xl-dl-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;background:#16a34a;color:#fff;border:none;border-radius:8px;padding:.75rem 1.2rem;font-family:var(--sans);font-size:.82rem;font-weight:700;cursor:pointer;transition:all .22s;text-decoration:none;width:100%}
+.xl-dl-btn:hover{background:#15803d;transform:translateY(-2px)}
+.xl-preview{background:var(--off);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.xl-preview-hdr{background:var(--navy);padding:.4rem .8rem;font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.xl-tbl{width:100%;border-collapse:collapse;font-size:.72rem}
+.xl-tbl th{background:#e8f5ec;color:#166534;font-weight:700;padding:.35rem .6rem;text-align:left;border-bottom:1px solid #d1fae5}
+.xl-tbl td{padding:.3rem .6rem;color:var(--body);border-bottom:1px solid var(--border)}
+.xl-tbl tr:last-child td{border-bottom:none}
+.xl-tbl td.formula{color:var(--accent);font-family:monospace}
+.xl-notice{margin-top:2rem;background:#fff;border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.8rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.xl-notice p{font-size:.82rem;color:var(--muted);flex:1}
+.xl-notice strong{color:var(--navy)}
+
+@media(max-width:768px){
+  .calc-grid{grid-template-columns:1fr}
+  .ft-tabs{width:100%}
+  .xl-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -262,7 +342,9 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#digital-card">Digital Card</a></li>
-    <li><a href="#tools">Tools</a></li>
+    <li><a href="#tools">Tools</a><a href="#finance-tools">Calculators</a><a href="#excel-downloads">Downloads</a></li>
+    <li><a href="#finance-tools">Calculators</a></li>
+    <li><a href="#excel-downloads">Downloads</a></li>
     <li><a href="#insights">Insights</a></li>
     <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
@@ -369,36 +451,69 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
     <p class="sec-sub" style="text-align:center;margin:0 auto">Shareable and downloadable in one click.</p>
   </div>
   <div class="dcard-wrap">
-    <span class="dcard-lbl">Preview</span>
-    <div style="width:100%;max-width:700px" class="reveal">
-      <div class="biz-card">
-        <div class="biz-pat"></div><div class="biz-bar"></div>
-        <div class="biz-l">
-          <div class="biz-mono">AK</div>
-          <div class="biz-icai">Chartered<br>Accountant<br>ICAI</div>
-        </div>
-        <div class="biz-r">
-          <div>
-            <div class="biz-badge">CA &middot; ICAI QUALIFIED</div>
-            <div class="biz-name">CA Akshay K Kothari</div>
-            <div class="biz-role-txt">FP&amp;A Professional &middot; Strategic Finance &middot; Freelance Consulting</div>
-            <div class="biz-div"></div>
-            <div class="biz-contacts">
-              <div class="biz-row"><div class="biz-ico"><svg width="12" height="12" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div>+91 98366 65840</div>
-              <div class="biz-row" id="cardEmail"><div class="biz-ico"><svg width="12" height="12" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span id="cardEmailTxt"></span></div>
-              <div class="biz-row"><div class="biz-ico li"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>linkedin.com/in/akkothari</div>
+    <span class="dcard-lbl">Your Digital Card</span>
+
+    <!-- Portrait Card -->
+    <div class="reveal">
+      <div class="vcard">
+        <!-- TOP: Navy banner -->
+        <div class="vcard-top">
+          <div class="vcard-top-pat"></div>
+          <div class="vcard-top-glow"></div>
+          <div class="vcard-gold-bar"></div>
+          <div class="vcard-badge">&#10022; CA &middot; ICAI Qualified</div>
+          <div class="vcard-name">CA Akshay K Kothari</div>
+          <div class="vcard-title">FP&amp;A Manager &middot; Landmark Group<br>Strategic Finance &middot; Freelance Consulting</div>
+          <!-- Photo overlapping bottom edge -->
+          <div class="vcard-photo-wrap">
+            <div class="vcard-photo-ring">
+              <div class="vcard-photo-inner">
+                <img src="" alt="CA Akshay K Kothari" id="vcardPhoto">
+              </div>
             </div>
           </div>
-          <div style="display:flex;justify-content:space-between;align-items:flex-end">
-            <div class="biz-tags"><span class="biz-etag">FP&amp;A</span><span class="biz-etag">Modelling</span><span class="biz-etag">Strategy</span><span class="biz-etag">8+ yrs</span></div>
-            <div class="biz-site">askakshay.com</div>
+        </div>
+        <!-- BOTTOM: White panel -->
+        <div class="vcard-bot">
+          <div class="vcard-bot-name">CA Akshay K Kothari</div>
+          <div class="vcard-bot-role">Chartered Accountant &middot; ICAI</div>
+          <div class="vcard-divider"></div>
+          <div class="vcard-rows">
+            <div class="vcard-row" onclick="window.location='tel:+919836665840'">
+              <div class="vcard-row-ico vr-ph"><svg width="16" height="16" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div>
+              <div><div class="vcard-row-lbl">Phone</div><div class="vcard-row-val">+91 98366 65840</div></div>
+            </div>
+            <div class="vcard-row" id="vcardEmailRow">
+              <div class="vcard-row-ico vr-em"><svg width="16" height="16" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><div class="vcard-row-lbl">Email</div><div class="vcard-row-val" id="cardEmailTxt"></div></div>
+            </div>
+            <div class="vcard-row" onclick="window.open('https://www.linkedin.com/in/akkothari/','_blank')">
+              <div class="vcard-row-ico vr-li"><svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(10,102,194,1)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+              <div><div class="vcard-row-lbl">LinkedIn</div><div class="vcard-row-val">linkedin.com/in/akkothari</div></div>
+            </div>
           </div>
+          <div class="vcard-tags">
+            <span class="vcard-tag">FP&amp;A</span>
+            <span class="vcard-tag">Financial Modelling</span>
+            <span class="vcard-tag">Budgeting</span>
+            <span class="vcard-tag">Strategy</span>
+            <span class="vcard-tag">8+ yrs</span>
+          </div>
+          <button class="vcard-save" onclick="dlVCard()">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            + Save Contact
+          </button>
+          <div class="vcard-site">askakshay.com</div>
         </div>
       </div>
     </div>
+
+    <!-- Download PNG button -->
     <div class="dcard-btns reveal">
-      <button class="btn btn-gold" id="btnDL" onclick="dlPNG()"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Download Card (PNG)</button>
-      <button class="btn btn-dark" onclick="dlVCard()"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>Save Contact (.vcf)</button>
+      <button class="btn btn-gold" id="btnDL" onclick="dlPNG()">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download Card (PNG)
+      </button>
     </div>
     <div class="dl-status" id="dlStatus"></div>
   </div>
@@ -426,6 +541,201 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
   <div class="tools-notify reveal">
     <div><h4>Get notified when tools go live</h4><p>Templates launching soon at <strong>askakshay.com</strong></p></div>
     <button class="btn btn-dark" onclick="notifyMe()"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>Notify Me</button>
+  </div>
+</section>
+
+
+<!-- FINANCE TOOLS -->
+<section id="finance-tools">
+  <div class="reveal" style="margin-bottom:2.5rem">
+    <div class="sec-lbl" style="color:var(--gold-l)">Interactive</div>
+    <h2 class="sec-h" style="color:#fff">Finance Calculators</h2>
+    <div class="gold-bar" style="margin:.8rem 0 1rem"></div>
+    <p class="sec-sub" style="color:rgba(255,255,255,.5)">Instant results. No signup required. Built on real FP&amp;A formulas.</p>
+  </div>
+  <div class="ft-tabs reveal">
+    <button class="ft-tab active" onclick="switchCalc('roi',this)">ROI Calculator</button>
+    <button class="ft-tab" onclick="switchCalc('bep',this)">Break-even Calculator</button>
+    <button class="ft-tab" onclick="switchCalc('runway',this)">Startup Runway</button>
+  </div>
+
+  <!-- ROI -->
+  <div class="calc-panel active" id="calc-roi">
+    <div class="calc-grid">
+      <div class="calc-inputs reveal">
+        <div class="sec-lbl" style="color:var(--gold-l)">ROI = (Net Profit / Investment) &times; 100</div>
+        <div class="calc-field">
+          <label class="calc-lbl">Net Profit</label>
+          <div class="calc-in-prefix"><span>&#8377;</span><input class="calc-in" id="roi-profit" type="number" placeholder="e.g. 150000" oninput="calcROI()"></div>
+        </div>
+        <div class="calc-field">
+          <label class="calc-lbl">Total Investment</label>
+          <div class="calc-in-prefix"><span>&#8377;</span><input class="calc-in" id="roi-invest" type="number" placeholder="e.g. 500000" oninput="calcROI()"></div>
+        </div>
+        <div class="calc-field">
+          <label class="calc-lbl">Investment Period (months)</label>
+          <input class="calc-in" id="roi-months" type="number" placeholder="e.g. 12" oninput="calcROI()">
+        </div>
+        <button class="calc-btn" onclick="calcROI()">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10"/></svg>
+          Calculate ROI
+        </button>
+      </div>
+      <div class="calc-result reveal" id="roi-result">
+        <div class="res-empty">
+          <svg width="40" height="40" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          <p>Enter your numbers to see<br>your ROI result</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREAK-EVEN -->
+  <div class="calc-panel" id="calc-bep">
+    <div class="calc-grid">
+      <div class="calc-inputs reveal">
+        <div class="sec-lbl" style="color:var(--gold-l)">Break-even = Fixed Cost / (Price &minus; Variable Cost)</div>
+        <div class="calc-field">
+          <label class="calc-lbl">Fixed Costs (monthly)</label>
+          <div class="calc-in-prefix"><span>&#8377;</span><input class="calc-in" id="bep-fixed" type="number" placeholder="e.g. 200000" oninput="calcBEP()"></div>
+        </div>
+        <div class="calc-field">
+          <label class="calc-lbl">Selling Price (per unit)</label>
+          <div class="calc-in-prefix"><span>&#8377;</span><input class="calc-in" id="bep-price" type="number" placeholder="e.g. 1500" oninput="calcBEP()"></div>
+        </div>
+        <div class="calc-field">
+          <label class="calc-lbl">Variable Cost (per unit)</label>
+          <div class="calc-in-prefix"><span>&#8377;</span><input class="calc-in" id="bep-var" type="number" placeholder="e.g. 600" oninput="calcBEP()"></div>
+        </div>
+        <button class="calc-btn" onclick="calcBEP()">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          Calculate Break-even
+        </button>
+      </div>
+      <div class="calc-result reveal" id="bep-result">
+        <div class="res-empty">
+          <svg width="40" height="40" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          <p>Enter your costs and pricing<br>to find your break-even point</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RUNWAY -->
+  <div class="calc-panel" id="calc-runway">
+    <div class="calc-grid">
+      <div class="calc-inputs reveal">
+        <div class="sec-lbl" style="color:var(--gold-l)">Runway = Cash Balance / Monthly Burn Rate</div>
+        <div class="calc-field">
+          <label class="calc-lbl">Current Cash Balance</label>
+          <div class="calc-in-prefix"><span>&#8377;</span><input class="calc-in" id="rw-cash" type="number" placeholder="e.g. 5000000" oninput="calcRunway()"></div>
+        </div>
+        <div class="calc-field">
+          <label class="calc-lbl">Monthly Revenue</label>
+          <div class="calc-in-prefix"><span>&#8377;</span><input class="calc-in" id="rw-rev" type="number" placeholder="e.g. 300000" oninput="calcRunway()"></div>
+        </div>
+        <div class="calc-field">
+          <label class="calc-lbl">Monthly Expenses</label>
+          <div class="calc-in-prefix"><span>&#8377;</span><input class="calc-in" id="rw-exp" type="number" placeholder="e.g. 450000" oninput="calcRunway()"></div>
+        </div>
+        <button class="calc-btn" onclick="calcRunway()">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Calculate Runway
+        </button>
+      </div>
+      <div class="calc-result reveal" id="rw-result">
+        <div class="res-empty">
+          <svg width="40" height="40" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          <p>Enter your cash position<br>to calculate startup runway</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXCEL DOWNLOADS -->
+<section id="excel-downloads">
+  <div class="reveal" style="margin-bottom:3rem">
+    <div class="sec-lbl">Free Downloads</div>
+    <h2 class="sec-h">Excel Templates</h2>
+    <div class="gold-bar" style="margin:.8rem 0 1rem"></div>
+    <p class="sec-sub">Ready-to-use templates built from real consulting engagements. Download, open in Excel, and start immediately.</p>
+  </div>
+  <div class="xl-grid">
+
+    <!-- Startup Budget Template -->
+    <div class="xl-card reveal">
+      <div class="xl-card-top">
+        <div class="xl-icon">
+          <svg width="26" height="26" fill="none" stroke="#16a34a" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <div class="xl-card-info">
+          <h3>Startup Budget Template</h3>
+          <p>12-month department-wise budget with revenue projections, expense tracking, and variance analysis.</p>
+        </div>
+      </div>
+      <div class="xl-tabs">
+        <span class="xl-tab">Revenue Plan</span>
+        <span class="xl-tab">Expense Tracker</span>
+        <span class="xl-tab">Variance Analysis</span>
+        <span class="xl-tab">12-Month View</span>
+      </div>
+      <div class="xl-preview">
+        <div class="xl-preview-hdr">Preview &mdash; Startup Budget Template</div>
+        <table class="xl-tbl">
+          <thead><tr><th>Category</th><th>Budget</th><th>Actual</th><th>Variance</th></tr></thead>
+          <tbody>
+            <tr><td>Revenue</td><td>&#8377;5,00,000</td><td>&#8377;4,80,000</td><td class="formula">-4.0%</td></tr>
+            <tr><td>Salaries</td><td>&#8377;2,00,000</td><td>&#8377;1,95,000</td><td class="formula">+2.5%</td></tr>
+            <tr><td>Marketing</td><td>&#8377;50,000</td><td>&#8377;62,000</td><td class="formula">-24.0%</td></tr>
+            <tr><td><strong>Net Profit</strong></td><td><strong>&#8377;1,50,000</strong></td><td><strong>&#8377;1,23,000</strong></td><td class="formula">-18.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="xl-dl-btn" onclick="dlTemplate('budget')">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download Startup Budget Template (.csv)
+      </button>
+    </div>
+
+    <!-- Cash Flow Template -->
+    <div class="xl-card reveal">
+      <div class="xl-card-top">
+        <div class="xl-icon">
+          <svg width="26" height="26" fill="none" stroke="#16a34a" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <div class="xl-card-info">
+          <h3>Cash Flow Forecast Template</h3>
+          <p>13-week rolling cash flow forecast with opening balance, inflows, outflows, and closing cash position.</p>
+        </div>
+      </div>
+      <div class="xl-tabs">
+        <span class="xl-tab">13-Week Forecast</span>
+        <span class="xl-tab">Cash Inflows</span>
+        <span class="xl-tab">Cash Outflows</span>
+        <span class="xl-tab">Burn Rate</span>
+      </div>
+      <div class="xl-preview">
+        <div class="xl-preview-hdr">Preview &mdash; Cash Flow Forecast</div>
+        <table class="xl-tbl">
+          <thead><tr><th>Item</th><th>Week 1</th><th>Week 2</th><th>Week 3</th></tr></thead>
+          <tbody>
+            <tr><td>Opening Balance</td><td>&#8377;10,00,000</td><td>&#8377;8,75,000</td><td>&#8377;9,40,000</td></tr>
+            <tr><td>Cash Inflows</td><td>&#8377;1,20,000</td><td>&#8377;2,15,000</td><td>&#8377;1,80,000</td></tr>
+            <tr><td>Cash Outflows</td><td>&#8377;2,45,000</td><td>&#8377;1,50,000</td><td>&#8377;1,95,000</td></tr>
+            <tr><td><strong>Closing Balance</strong></td><td><strong>&#8377;8,75,000</strong></td><td><strong>&#8377;9,40,000</strong></td><td><strong>&#8377;9,25,000</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <button class="xl-dl-btn" onclick="dlTemplate('cashflow')">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download Cash Flow Forecast Template (.csv)
+      </button>
+    </div>
+  </div>
+  <div class="xl-notice reveal">
+    <svg width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+    <p>Files download as <strong>.csv</strong> &mdash; open directly in <strong>Microsoft Excel, Google Sheets, or Numbers</strong>. All formulas are pre-built and ready to use. Custom Excel models with advanced automation available via <a href="#contact" style="color:var(--accent);font-weight:600">Freelance Consulting</a>.</p>
   </div>
 </section>
 
@@ -509,7 +819,7 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
   <p class="ft-copy">&#169; 2025 <span class="ft-name">CA Akshay K Kothari</span> &middot; Chartered Accountant &middot; All rights reserved.</p>
   <nav class="ft-nav">
     <a href="#hero">Home</a><a href="#about">About</a><a href="#services">Services</a>
-    <a href="#digital-card">Digital Card</a><a href="#tools">Tools</a>
+    <a href="#digital-card">Digital Card</a><a href="#tools">Tools</a><a href="#finance-tools">Calculators</a><a href="#excel-downloads">Downloads</a>
     <a href="#insights">Insights</a><a href="#contact">Contact</a>
     <a href="https://www.linkedin.com/in/akkothari/" target="_blank" rel="noopener">LinkedIn</a>
   </nav>
@@ -521,6 +831,9 @@ var _e = 'ca.akkothari' + '@' + 'gmail.com';
 document.getElementById('emailTxt').textContent = _e;
 document.getElementById('emailRow').onclick = function(){ window.location = 'mailto:' + _e; };
 document.getElementById('cardEmailTxt').textContent = _e;
+document.getElementById('vcardEmailRow').onclick = function(){ window.location = 'mailto:' + _e; };
+// Copy hero photo src to vcard photo
+(function(){ var h=document.querySelector('.hero-photo'); if(h) document.getElementById('vcardPhoto').src=h.src; })();
 document.querySelectorAll('.art-cta a').forEach(function(a){
   if(a.textContent.indexOf('Consultation') > -1) a.setAttribute('data-email', _e);
 });
@@ -587,83 +900,355 @@ function notifyMe(){
 // ── DIGITAL CARD ──
 function setSt(msg,t){var s=document.getElementById('dlStatus');s.textContent=msg;s.className='dl-status'+(t?' '+t:'')}
 function rr(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.lineTo(x+w-r,y);c.quadraticCurveTo(x+w,y,x+w,y+r);c.lineTo(x+w,y+h-r);c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);c.lineTo(x+r,y+h);c.quadraticCurveTo(x,y+h,x,y+h-r);c.lineTo(x,y+r);c.quadraticCurveTo(x,y,x+r,y);c.closePath()}
-function drawCard(ctx,W,H){
-  // Background
-  var bg=ctx.createLinearGradient(0,0,W,H);
-  bg.addColorStop(0,'#162847');bg.addColorStop(.5,'#1e3a5f');bg.addColorStop(1,'#162847');
-  rr(ctx,0,0,W,H,24);ctx.fillStyle=bg;ctx.fill();
-  ctx.save();rr(ctx,0,0,W,H,24);ctx.clip();
-  // dot grid
-  ctx.fillStyle='rgba(255,255,255,0.035)';
-  for(var gx=20;gx<W;gx+=30)for(var gy=20;gy<H;gy+=30){ctx.beginPath();ctx.arc(gx,gy,1,0,Math.PI*2);ctx.fill()}
-  // gold left bar
-  var gg=ctx.createLinearGradient(0,0,0,H);gg.addColorStop(0,'#c49a3c');gg.addColorStop(.5,'#f0cc6a');gg.addColorStop(1,'#c49a3c');
-  ctx.fillStyle=gg;ctx.fillRect(0,0,6,H);
-  // left panel monogram
-  var cx=103;
-  var cg=ctx.createRadialGradient(cx-10,H/2-60,10,cx,H/2-30,58);cg.addColorStop(0,'#3a7ee0');cg.addColorStop(1,'#0d2550');
-  ctx.beginPath();ctx.arc(cx,H/2-30,58,0,Math.PI*2);ctx.fillStyle=cg;ctx.fill();
-  ctx.strokeStyle='rgba(196,154,60,0.6)';ctx.lineWidth=2.5;ctx.stroke();
-  ctx.fillStyle='#fff';ctx.font='bold 38px Georgia,serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('AK',cx,H/2-30);
-  // credential labels
-  ctx.fillStyle='rgba(255,255,255,0.55)';ctx.font='bold 10px Arial,sans-serif';ctx.textAlign='center';
-  ['CHARTERED','ACCOUNTANT','ICAI'].forEach(function(l,i){ctx.fillText(l,cx,H/2+50+i*17)});
-  // divider line
-  ctx.strokeStyle='rgba(255,255,255,0.1)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(200,28);ctx.lineTo(200,H-28);ctx.stroke();
-  // RIGHT PANEL
-  var rX=220;
-  // badge
-  var btxt='CA  \u00B7  ICAI QUALIFIED';
-  ctx.font='bold 10px Arial,sans-serif';
-  var bw=ctx.measureText(btxt).width+28;
-  rr(ctx,rX,30,bw,24,12);ctx.fillStyle='rgba(196,154,60,0.2)';ctx.fill();
-  ctx.strokeStyle='rgba(196,154,60,0.55)';ctx.lineWidth=1;rr(ctx,rX,30,bw,24,12);ctx.stroke();
-  ctx.fillStyle='#f0cc6a';ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(btxt,rX+14,42);
+
+function drawPortraitCard(ctx, W, H, photoImg) {
+  var R = 22; // corner radius
+  var topH = Math.round(H * 0.48);
+  var botH = H - topH;
+  var CX = W / 2;
+  var PR = 70; // photo circle radius
+
+  // ── Full card clip ──
+  rr(ctx, 0, 0, W, H, R); ctx.clip();
+
+  // ── TOP: navy gradient ──
+  var topBg = ctx.createLinearGradient(0, 0, W * 0.6, topH);
+  topBg.addColorStop(0, '#0d1f3c'); topBg.addColorStop(0.7, '#1a3560'); topBg.addColorStop(1, '#0f2848');
+  ctx.fillStyle = topBg; ctx.fillRect(0, 0, W, topH);
+
+  // dot grid on top
+  ctx.fillStyle = 'rgba(255,255,255,0.04)';
+  for (var gx = 16; gx < W; gx += 28) for (var gy = 16; gy < topH; gy += 28) {
+    ctx.beginPath(); ctx.arc(gx, gy, 1, 0, Math.PI * 2); ctx.fill();
+  }
+
+  // glow top-right
+  var glow = ctx.createRadialGradient(W, 0, 10, W - 60, 60, 160);
+  glow.addColorStop(0, 'rgba(42,109,224,0.22)'); glow.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = glow; ctx.fillRect(0, 0, W, topH);
+
+  // gold top bar
+  var goldG = ctx.createLinearGradient(0, 0, W, 0);
+  goldG.addColorStop(0, '#c49a3c'); goldG.addColorStop(0.5, '#f0cc6a'); goldG.addColorStop(1, '#c49a3c');
+  ctx.fillStyle = goldG; ctx.fillRect(0, 0, W, 5);
+
+  // ── BOTTOM: white ──
+  ctx.fillStyle = '#ffffff'; ctx.fillRect(0, topH, W, botH);
+
+  // ── TOP TEXT ──
+  // Badge pill
+  var btxt = 'CA  ·  ICAI QUALIFIED';
+  ctx.font = 'bold 11px Arial, sans-serif';
+  var bw = ctx.measureText(btxt).width + 28;
+  var bx = CX - bw / 2, by = 22;
+  rr(ctx, bx, by, bw, 26, 13);
+  ctx.fillStyle = 'rgba(196,154,60,0.2)'; ctx.fill();
+  ctx.strokeStyle = 'rgba(196,154,60,0.55)'; ctx.lineWidth = 1; rr(ctx, bx, by, bw, 26, 13); ctx.stroke();
+  ctx.fillStyle = '#f0cc6a'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText(btxt, CX, by + 13);
+
   // Name
-  ctx.fillStyle='#ffffff';ctx.font='bold 36px Georgia,serif';ctx.textAlign='left';ctx.textBaseline='alphabetic';ctx.fillText('CA Akshay K Kothari',rX,104);
-  // Role
-  ctx.fillStyle='rgba(255,255,255,0.6)';ctx.font='15px Arial,sans-serif';ctx.fillText('FP&A Professional  \u00B7  Strategic Finance  \u00B7  Consulting',rX,128);
-  // Gold divider
-  var dg=ctx.createLinearGradient(rX,0,rX+70,0);dg.addColorStop(0,'#c49a3c');dg.addColorStop(1,'#f0cc6a');
-  ctx.fillStyle=dg;ctx.fillRect(rX,144,70,3);
-  // Contacts (no emojis — icon pills only)
-  var contacts=[
-    {ico:'Ph',val:'+91 98366 65840',blue:false},
-    {ico:'Em',val:_e,blue:false},
-    {ico:'in',val:'linkedin.com/in/akkothari',blue:true}
-  ];
-  contacts.forEach(function(c,i){
-    var iy=172+i*32,ix=rX;
-    rr(ctx,ix,iy-11,28,22,5);ctx.fillStyle=c.blue?'rgba(10,102,194,0.8)':'rgba(255,255,255,0.15)';ctx.fill();
-    ctx.fillStyle='#fff';ctx.font='bold 9px Arial,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(c.ico,ix+14,iy);
-    ctx.fillStyle='rgba(255,255,255,0.88)';ctx.font='14px Arial,sans-serif';ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(c.val,ix+36,iy);
-  });
-  // Tags
-  var tags=['FP&A','Modelling','Strategy','8+ yrs'],tx=rX,ty=H-38;
-  ctx.font='bold 10px Arial,sans-serif';
-  tags.forEach(function(t){
-    var tw=ctx.measureText(t).width+18;
-    rr(ctx,tx,ty-13,tw,26,13);ctx.fillStyle='rgba(255,255,255,0.1)';ctx.fill();
-    ctx.strokeStyle='rgba(255,255,255,0.22)';ctx.lineWidth=1;rr(ctx,tx,ty-13,tw,26,13);ctx.stroke();
-    ctx.fillStyle='rgba(255,255,255,0.75)';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(t,tx+tw/2,ty);tx+=tw+8;
-  });
-  // Website
-  ctx.fillStyle='rgba(255,255,255,0.28)';ctx.font='11px Georgia,serif';ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillText('askakshay.com',W-28,H-28);
+  ctx.fillStyle = '#ffffff'; ctx.font = 'bold 30px Georgia, serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+  ctx.fillText('CA Akshay K Kothari', CX, 80);
+
+  // Role line 1
+  ctx.fillStyle = 'rgba(255,255,255,0.6)'; ctx.font = '13px Arial, sans-serif';
+  ctx.fillText('FP&A Manager  ·  Landmark Group', CX, 102);
+  // Role line 2
+  ctx.fillStyle = 'rgba(255,255,255,0.42)'; ctx.font = '12px Arial, sans-serif';
+  ctx.fillText('Strategic Finance  ·  Freelance Consulting', CX, 120);
+
+  // ── PHOTO CIRCLE (centred, half in top / half in bottom) ──
+  var photoY = topH; // centre of photo at top/bottom boundary
+  // Gold ring
+  ctx.beginPath(); ctx.arc(CX, photoY, PR + 4, 0, Math.PI * 2);
+  var ringG = ctx.createLinearGradient(CX - PR, photoY - PR, CX + PR, photoY + PR);
+  ringG.addColorStop(0, '#f0cc6a'); ringG.addColorStop(1, '#c49a3c');
+  ctx.fillStyle = ringG; ctx.fill();
+
+  // White gap ring
+  ctx.beginPath(); ctx.arc(CX, photoY, PR + 2, 0, Math.PI * 2);
+  ctx.fillStyle = '#fff'; ctx.fill();
+
+  // Photo clip
+  ctx.save();
+  ctx.beginPath(); ctx.arc(CX, photoY, PR, 0, Math.PI * 2); ctx.clip();
+  if (photoImg && photoImg.complete && photoImg.naturalWidth > 0) {
+    // Draw image centred and cropped square
+    var iw = photoImg.naturalWidth, ih = photoImg.naturalHeight;
+    var scale = (PR * 2) / Math.min(iw, ih);
+    var dw = iw * scale, dh = ih * scale;
+    ctx.drawImage(photoImg, CX - dw / 2, photoY - dh / 2 - dh * 0.05, dw, dh);
+  } else {
+    // Fallback monogram
+    var mg = ctx.createLinearGradient(CX - PR, photoY - PR, CX + PR, photoY + PR);
+    mg.addColorStop(0, '#3a7ee0'); mg.addColorStop(1, '#0d2244');
+    ctx.fillStyle = mg; ctx.fill(); // already clipped circle
+    ctx.fillStyle = '#fff'; ctx.font = 'bold 36px Georgia, serif';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText('AK', CX, photoY);
+  }
   ctx.restore();
+
+  // ── BOTTOM TEXT ──
+  var botY = topH + PR + 18; // start below photo circle
+
+  // Sub-name + CA credential
+  ctx.fillStyle = '#0d1f3c'; ctx.font = 'bold 18px Georgia, serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+  ctx.fillText('CA Akshay K Kothari', CX, botY);
+  botY += 20;
+  ctx.fillStyle = '#7a8fa8'; ctx.font = '12px Arial, sans-serif';
+  ctx.fillText('Chartered Accountant  ·  ICAI', CX, botY);
+
+  // Gold divider
+  botY += 14;
+  var divG = ctx.createLinearGradient(CX - 30, 0, CX + 30, 0);
+  divG.addColorStop(0, '#c49a3c'); divG.addColorStop(1, '#f0cc6a');
+  ctx.fillStyle = divG; ctx.fillRect(CX - 30, botY, 60, 3);
+  botY += 18;
+
+  // Contact rows
+  var contacts = [
+    { ico: 'Ph', val: '+91 98366 65840', col: 'rgba(42,109,224,0.12)', tc: '#2a6de0' },
+    { ico: 'Em', val: _e, col: 'rgba(196,154,60,0.12)', tc: '#c49a3c' },
+    { ico: 'in', val: 'linkedin.com/in/akkothari', col: 'rgba(10,102,194,0.12)', tc: 'rgba(10,102,194,0.9)' }
+  ];
+  var rowH = 34, rowW = W - 56, rowX = 28;
+  contacts.forEach(function(c) {
+    rr(ctx, rowX, botY, rowW, rowH, 10);
+    ctx.fillStyle = '#f6f8fb'; ctx.fill();
+    ctx.strokeStyle = '#dde4ef'; ctx.lineWidth = 1; rr(ctx, rowX, botY, rowW, rowH, 10); ctx.stroke();
+    // Icon circle
+    ctx.beginPath(); ctx.arc(rowX + 18, botY + rowH / 2, 12, 0, Math.PI * 2);
+    ctx.fillStyle = c.col; ctx.fill();
+    ctx.fillStyle = c.tc; ctx.font = 'bold 8px Arial,sans-serif';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(c.ico, rowX + 18, botY + rowH / 2);
+    // Value
+    ctx.fillStyle = '#0d1f3c'; ctx.font = '13px Arial, sans-serif';
+    ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+    ctx.fillText(c.val, rowX + 36, botY + rowH / 2);
+    botY += rowH + 7;
+  });
+
+  // Tags
+  botY += 4;
+  var tags = ['FP&A', 'Modelling', 'Strategy', '8+ yrs'];
+  ctx.font = 'bold 9px Arial, sans-serif';
+  var totalTW = 0;
+  tags.forEach(function(t) { totalTW += ctx.measureText(t).width + 20 + 7; });
+  var tx = CX - (totalTW - 7) / 2;
+  tags.forEach(function(t) {
+    var tw = ctx.measureText(t).width + 20;
+    rr(ctx, tx, botY - 9, tw, 19, 9);
+    ctx.fillStyle = 'rgba(42,109,224,0.08)'; ctx.fill();
+    ctx.strokeStyle = 'rgba(42,109,224,0.2)'; ctx.lineWidth = 1; rr(ctx, tx, botY - 9, tw, 19, 9); ctx.stroke();
+    ctx.fillStyle = '#2a6de0'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(t, tx + tw / 2, botY); tx += tw + 7;
+  });
+
+  // Website
+  ctx.fillStyle = '#b0bccc'; ctx.font = '11px Georgia, serif';
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText('askakshay.com', CX, H - 14);
 }
+
 function dlPNG(){
-  var btn=document.getElementById('btnDL');btn.disabled=true;btn.textContent='Generating...';setSt('Drawing...');
-  try{
-    var W=860,H=440,cv=document.createElement('canvas');cv.width=W*2;cv.height=H*2;
-    var ctx=cv.getContext('2d');ctx.scale(2,2);drawCard(ctx,W,H);
-    cv.toBlob(function(blob){var url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='CA-Akshay-K-Kothari-Card.png';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);setSt('Downloaded!','ok');setTimeout(function(){setSt('')},3000)},'image/png');
-  }catch(e){setSt('Error: '+e.message,'err')}
-  btn.disabled=false;btn.textContent='Download Card (PNG)';
+  var btn = document.getElementById('btnDL');
+  btn.disabled = true; btn.textContent = 'Generating...'; setSt('Drawing...');
+  var photoImg = document.getElementById('vcardPhoto');
+  var W = 440, H = 640;
+  var cv = document.createElement('canvas'); cv.width = W * 2; cv.height = H * 2;
+  var ctx = cv.getContext('2d'); ctx.scale(2, 2);
+  ctx.save();
+  drawPortraitCard(ctx, W, H, photoImg);
+  ctx.restore();
+  cv.toBlob(function(blob){
+    var url = URL.createObjectURL(blob), a = document.createElement('a');
+    a.href = url; a.download = 'CA-Akshay-K-Kothari-Card.png';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+    setSt('Downloaded!','ok'); setTimeout(function(){setSt('')},3000);
+  }, 'image/png');
+  btn.disabled = false; btn.textContent = 'Download Card (PNG)';
 }
 function dlVCard(){
   var v=['BEGIN:VCARD','VERSION:3.0','FN:CA Akshay K Kothari','N:Kothari;Akshay;K;;CA','TITLE:FP&A Professional | Strategic Finance','ORG:CA Akshay K Kothari - Finance Consulting','TEL;TYPE=CELL:+919836665840','EMAIL;TYPE=WORK:'+_e,'URL:https://www.linkedin.com/in/akkothari/','NOTE:Chartered Accountant (ICAI) | 8+ years in FP&A','END:VCARD'].join('\n');
   var url=URL.createObjectURL(new Blob([v],{type:'text/vcard'})),a=document.createElement('a');a.href=url;a.download='CA-Akshay-K-Kothari.vcf';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
   setSt('Contact saved!','ok');setTimeout(function(){setSt('')},3000);
+}
+
+// ── CALCULATOR SWITCHER ──
+function switchCalc(id, btn) {
+  document.querySelectorAll('.calc-panel').forEach(function(p){p.classList.remove('active')});
+  document.querySelectorAll('.ft-tab').forEach(function(b){b.classList.remove('active')});
+  document.getElementById('calc-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── ROI CALCULATOR ──
+function calcROI() {
+  var profit = parseFloat(document.getElementById('roi-profit').value);
+  var invest = parseFloat(document.getElementById('roi-invest').value);
+  var months = parseFloat(document.getElementById('roi-months').value) || 12;
+  var el = document.getElementById('roi-result');
+  if (isNaN(profit) || isNaN(invest) || invest === 0) { showEmpty(el); return; }
+  var roi = (profit / invest) * 100;
+  var annualised = months !== 12 ? (roi / months * 12) : null;
+  var cls = roi >= 0 ? 'positive' : 'negative';
+  var insight = roi >= 20
+    ? '<strong>Excellent ROI.</strong> This exceeds the typical 15-20% benchmark for most business investments.'
+    : roi >= 10
+    ? '<strong>Healthy ROI.</strong> Above the cost of capital for most SMEs. Reinvestment is justified.'
+    : roi >= 0
+    ? '<strong>Positive but low.</strong> Consider whether the risk-adjusted return meets your hurdle rate.'
+    : '<strong>Negative ROI.</strong> The investment is currently loss-making. Review cost structure or revenue assumptions.';
+  el.innerHTML = '<div class="res-metric"><div class="res-value '+cls+'">'+roi.toFixed(1)+'<span style="font-size:1.8rem">%</span></div><div class="res-unit">Return on Investment</div></div>'
+    + '<div class="res-divider"></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Net Profit</span><span class="res-row-val">&#8377;'+fmt(profit)+'</span></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Total Investment</span><span class="res-row-val">&#8377;'+fmt(invest)+'</span></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Profit Margin</span><span class="res-row-val">'+(profit/(invest+profit)*100).toFixed(1)+'%</span></div>'
+    + (annualised ? '<div class="res-row"><span class="res-row-lbl">Annualised ROI ('+(months)+' mo)</span><span class="res-row-val">'+annualised.toFixed(1)+'%</span></div>' : '')
+    + '<div class="res-divider"></div>'
+    + '<div class="res-insight">'+insight+'</div>';
+}
+
+// ── BREAK-EVEN CALCULATOR ──
+function calcBEP() {
+  var fixed = parseFloat(document.getElementById('bep-fixed').value);
+  var price = parseFloat(document.getElementById('bep-price').value);
+  var varCost = parseFloat(document.getElementById('bep-var').value);
+  var el = document.getElementById('bep-result');
+  if (isNaN(fixed) || isNaN(price) || isNaN(varCost)) { showEmpty(el); return; }
+  var cm = price - varCost;
+  if (cm <= 0) {
+    el.innerHTML = '<div class="res-insight"><strong style="color:#f87171">Pricing error.</strong> Variable cost per unit exceeds or equals the selling price. The contribution margin must be positive to break even.</div>';
+    return;
+  }
+  var units = Math.ceil(fixed / cm);
+  var revenue = units * price;
+  var cmRatio = (cm / price * 100);
+  var insight = cmRatio >= 50
+    ? '<strong>Strong contribution margin ('+cmRatio.toFixed(0)+'%).</strong> High operating leverage — each unit sold significantly covers fixed costs.'
+    : cmRatio >= 30
+    ? '<strong>Healthy margin ('+cmRatio.toFixed(0)+'%).</strong> Break-even is achievable with moderate volume.'
+    : '<strong>Thin margin ('+cmRatio.toFixed(0)+'%).</strong> Consider reviewing variable costs or increasing the selling price to improve break-even dynamics.';
+  el.innerHTML = '<div class="res-metric"><div class="res-value neutral">'+fmt(units)+'</div><div class="res-unit">Units to Break Even</div></div>'
+    + '<div class="res-divider"></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Break-even Revenue</span><span class="res-row-val">&#8377;'+fmt(revenue)+'</span></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Contribution per Unit</span><span class="res-row-val">&#8377;'+fmt(cm)+'</span></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Contribution Margin %</span><span class="res-row-val">'+cmRatio.toFixed(1)+'%</span></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Fixed Costs</span><span class="res-row-val">&#8377;'+fmt(fixed)+'</span></div>'
+    + '<div class="res-divider"></div>'
+    + '<div class="res-insight">'+insight+'</div>';
+}
+
+// ── RUNWAY CALCULATOR ──
+function calcRunway() {
+  var cash = parseFloat(document.getElementById('rw-cash').value);
+  var rev  = parseFloat(document.getElementById('rw-rev').value) || 0;
+  var exp  = parseFloat(document.getElementById('rw-exp').value);
+  var el   = document.getElementById('rw-result');
+  if (isNaN(cash) || isNaN(exp)) { showEmpty(el); return; }
+  var burn = exp - rev;
+  if (burn <= 0) {
+    el.innerHTML = '<div class="res-metric"><div class="res-value positive">&#8734;</div><div class="res-unit">Runway (Cash Flow Positive)</div></div>'
+      + '<div class="res-divider"></div>'
+      + '<div class="res-row"><span class="res-row-lbl">Monthly Net Cash Flow</span><span class="res-row-val" style="color:#4ade80">+&#8377;'+fmt(Math.abs(burn))+'</span></div>'
+      + '<div class="res-insight"><strong style="color:#4ade80">Cash flow positive.</strong> Revenue exceeds expenses — your cash balance is growing, not depleting. Focus on reinvestment strategy.</div>';
+    return;
+  }
+  var months = cash / burn;
+  var cls = months >= 18 ? 'positive' : months >= 6 ? 'neutral' : 'negative';
+  var edate = new Date(); edate.setMonth(edate.getMonth() + Math.floor(months));
+  var edateStr = edate.toLocaleString('en-IN',{month:'long',year:'numeric'});
+  var insight = months >= 18
+    ? '<strong>Strong runway.</strong> 18+ months gives you time to hit milestones and raise the next round from a position of strength.'
+    : months >= 12
+    ? '<strong>Adequate runway.</strong> 12-18 months is workable, but start fundraising conversations now — it takes 3-6 months to close a round.'
+    : months >= 6
+    ? '<strong>Caution zone.</strong> Less than 12 months. Begin fundraising immediately or identify paths to profitability / cost reduction.'
+    : '<strong>Critical.</strong> Under 6 months of runway. Immediate action required: cut burn, accelerate revenue, or secure emergency capital.';
+  el.innerHTML = '<div class="res-metric"><div class="res-value '+cls+'">'+months.toFixed(1)+'</div><div class="res-unit">Months of Runway</div></div>'
+    + '<div class="res-divider"></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Monthly Burn Rate</span><span class="res-row-val" style="color:#f87171">-&#8377;'+fmt(burn)+'</span></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Cash Balance</span><span class="res-row-val">&#8377;'+fmt(cash)+'</span></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Cash Out Date</span><span class="res-row-val">'+edateStr+'</span></div>'
+    + '<div class="res-row"><span class="res-row-lbl">Annual Burn Rate</span><span class="res-row-val">&#8377;'+fmt(burn*12)+'</span></div>'
+    + '<div class="res-divider"></div>'
+    + '<div class="res-insight">'+insight+'</div>';
+}
+
+function fmt(n){ return Math.abs(n)>=10000000?(n/10000000).toFixed(1)+'Cr':Math.abs(n)>=100000?(n/100000).toFixed(1)+'L':Math.abs(n)>=1000?(n/1000).toFixed(1)+'K':Math.round(n).toLocaleString('en-IN'); }
+function showEmpty(el){ el.innerHTML='<div class="res-empty"><svg width="40" height="40" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10"/></svg><p>Fill in all fields to see results</p></div>'; }
+
+// ── EXCEL/CSV DOWNLOADS ──
+function dlTemplate(type) {
+  var csv, filename;
+  if (type === 'budget') {
+    csv = [
+      'CA Akshay K Kothari | Startup Budget Template | askakshay.com',
+      '',
+      'Category,Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec,Total',
+      '--- REVENUE ---,,,,,,,,,,,,,',
+      'Product Sales,0,0,0,0,0,0,0,0,0,0,0,0,=SUM(B5:M5)',
+      'Service Revenue,0,0,0,0,0,0,0,0,0,0,0,0,=SUM(B6:M6)',
+      'Other Income,0,0,0,0,0,0,0,0,0,0,0,0,=SUM(B7:M7)',
+      'TOTAL REVENUE,=SUM(B5:B7),=SUM(C5:C7),=SUM(D5:D7),=SUM(E5:E7),=SUM(F5:F7),=SUM(G5:G7),=SUM(H5:H7),=SUM(I5:I7),=SUM(J5:J7),=SUM(K5:K7),=SUM(L5:L7),=SUM(M5:M7),=SUM(B8:M8)',
+      '',
+      '--- EXPENSES ---,,,,,,,,,,,,,',
+      'Salaries & Wages,0,0,0,0,0,0,0,0,0,0,0,0,=SUM(B11:M11)',
+      'Rent & Utilities,0,0,0,0,0,0,0,0,0,0,0,0,=SUM(B12:M12)',
+      'Marketing,0,0,0,0,0,0,0,0,0,0,0,0,=SUM(B13:M13)',
+      'Technology & Software,0,0,0,0,0,0,0,0,0,0,0,0,=SUM(B14:M14)',
+      'Professional Fees,0,0,0,0,0,0,0,0,0,0,0,0,=SUM(B15:M15)',
+      'Miscellaneous,0,0,0,0,0,0,0,0,0,0,0,0,=SUM(B16:M16)',
+      'TOTAL EXPENSES,=SUM(B11:B16),=SUM(C11:C16),=SUM(D11:D16),=SUM(E11:E16),=SUM(F11:F16),=SUM(G11:G16),=SUM(H11:H16),=SUM(I11:I16),=SUM(J11:J16),=SUM(K11:K16),=SUM(L11:L16),=SUM(M11:M16),=SUM(B17:M17)',
+      '',
+      'NET PROFIT / (LOSS),=B8-B17,=C8-C17,=D8-D17,=E8-E17,=F8-F17,=G8-G17,=H8-H17,=I8-I17,=J8-J17,=K8-K17,=L8-L17,=M8-M17,=SUM(B19:M19)',
+      'PROFIT MARGIN %,=IF(B8>0;B19/B8*100;0),=IF(C8>0;C19/C8*100;0),=IF(D8>0;D19/D8*100;0),=IF(E8>0;E19/E8*100;0),=IF(F8>0;F19/F8*100;0),=IF(G8>0;G19/G8*100;0),=IF(H8>0;H19/H8*100;0),=IF(I8>0;I19/I8*100;0),=IF(J8>0;J19/J8*100;0),=IF(K8>0;K19/K8*100;0),=IF(L8>0;L19/L8*100;0),=IF(M8>0;M19/M8*100;0),=SUM(B20:M20)',
+      '',
+      'Template by CA Akshay K Kothari | askakshay.com | For custom models contact: Consult via askakshay.com'
+    ].join('
+');
+    filename = 'Startup-Budget-Template-CA-Akshay-K-Kothari.csv';
+  } else {
+    csv = [
+      'CA Akshay K Kothari | 13-Week Cash Flow Forecast | askakshay.com',
+      '',
+      'Item,Week 1,Week 2,Week 3,Week 4,Week 5,Week 6,Week 7,Week 8,Week 9,Week 10,Week 11,Week 12,Week 13',
+      'Opening Cash Balance,0,=D7,=E7,=F7,=G7,=H7,=I7,=J7,=K7,=L7,=M7,=N7,=O7',
+      '',
+      '--- CASH INFLOWS ---,,,,,,,,,,,,',
+      'Customer Collections,0,0,0,0,0,0,0,0,0,0,0,0,0',
+      'Loan / Investment Received,0,0,0,0,0,0,0,0,0,0,0,0,0',
+      'Other Inflows,0,0,0,0,0,0,0,0,0,0,0,0,0',
+      'TOTAL INFLOWS,=SUM(B7:B9),=SUM(C7:C9),=SUM(D7:D9),=SUM(E7:E9),=SUM(F7:F9),=SUM(G7:G9),=SUM(H7:H9),=SUM(I7:I9),=SUM(J7:J9),=SUM(K7:K9),=SUM(L7:L9),=SUM(M7:M9),=SUM(N7:N9)',
+      '',
+      '--- CASH OUTFLOWS ---,,,,,,,,,,,,',
+      'Salaries & Payroll,0,0,0,0,0,0,0,0,0,0,0,0,0',
+      'Rent & Utilities,0,0,0,0,0,0,0,0,0,0,0,0,0',
+      'Supplier Payments,0,0,0,0,0,0,0,0,0,0,0,0,0',
+      'Loan Repayments,0,0,0,0,0,0,0,0,0,0,0,0,0',
+      'Other Outflows,0,0,0,0,0,0,0,0,0,0,0,0,0',
+      'TOTAL OUTFLOWS,=SUM(B13:B17),=SUM(C13:C17),=SUM(D13:D17),=SUM(E13:E17),=SUM(F13:F17),=SUM(G13:G17),=SUM(H13:H17),=SUM(I13:I17),=SUM(J13:J17),=SUM(K13:K17),=SUM(L13:L17),=SUM(M13:M17),=SUM(N13:N17)',
+      '',
+      'NET CASH FLOW,=B10-B18,=C10-C18,=D10-D18,=E10-E18,=F10-F18,=G10-G18,=H10-H18,=I10-I18,=J10-J18,=K10-K18,=L10-L18,=M10-M18,=N10-N18',
+      'CLOSING CASH BALANCE,=B4+B20,=C4+C20,=D4+D20,=E4+E20,=F4+F20,=G4+G20,=H4+H20,=I4+I20,=J4+J20,=K4+K20,=L4+L20,=M4+M20,=N4+N20',
+      '',
+      'BURN RATE CHECK,=IF(B20<0;ABS(B20);"Cash +")',
+      '',
+      'Template by CA Akshay K Kothari | askakshay.com | For custom models contact: Consult via askakshay.com'
+    ].join('
+');
+    filename = 'CashFlow-Forecast-Template-CA-Akshay-K-Kothari.csv';
+  }
+  var blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a'); a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 </script>
 </body>
