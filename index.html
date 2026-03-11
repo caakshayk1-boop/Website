@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CA Akshay K Kothari | FP&A Professional</title>
+<title>CA Akshay K Kothari | FP&amp;A Professional</title>
+<meta name="description" content="CA Akshay K Kothari — Chartered Accountant, FP&A Manager at Landmark Group. Freelance consulting in Financial Planning, Modelling and Business Performance.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -17,8 +18,8 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);color:var(--body);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
-nav.sc{box-shadow:var(--sh1)}
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:200;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+nav#nav.sc{box-shadow:var(--sh1)}
 .nav-brand{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--navy);text-decoration:none}
 .nav-links{display:flex;list-style:none;gap:2rem;align-items:center}
 .nav-links a{font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s}
@@ -29,7 +30,6 @@ nav.sc{box-shadow:var(--sh1)}
 .hbg span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px}
 
 /* UTILS */
-.serif{font-family:var(--serif)}
 .gold-bar{height:2.5px;width:44px;background:linear-gradient(90deg,var(--gold),var(--gold-l));border-radius:2px}
 .sec-lbl{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
 .sec-h{font-family:var(--serif);font-size:clamp(1.9rem,3vw,2.7rem);font-weight:700;color:var(--navy);line-height:1.15;margin-bottom:.8rem}
@@ -41,7 +41,7 @@ section{padding:88px 5%}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
 
-/* BTN */
+/* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--sans);font-size:.875rem;font-weight:600;padding:.82rem 1.85rem;border-radius:7px;text-decoration:none;transition:all .22s;cursor:pointer;border:none;letter-spacing:.02em}
 .btn-dark{background:var(--navy);color:#fff;box-shadow:0 4px 14px rgba(13,31,60,.22)}
 .btn-dark:hover{background:var(--accent);transform:translateY(-2px)}
@@ -71,7 +71,7 @@ section{padding:88px 5%}
 .hero-fade-b{position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to top,rgba(255,255,255,.85),transparent);z-index:2}
 .hero-badge{position:absolute;bottom:18px;right:18px;z-index:3;background:var(--navy);color:#fff;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .75rem;border-radius:100px}
 .teasers{display:flex;flex-direction:column;gap:.6rem;margin-top:1.4rem;max-width:460px}
-.teaser{display:flex;align-items:center;gap:.9rem;background:#fff;border:1px solid var(--border);border-radius:10px;padding:.75rem 1rem;cursor:pointer;transition:all .22s;text-decoration:none}
+.teaser{display:flex;align-items:center;gap:.9rem;background:#fff;border:1px solid var(--border);border-radius:10px;padding:.75rem 1rem;cursor:pointer;transition:all .22s}
 .teaser:hover{background:var(--off);border-color:var(--accent);transform:translateX(4px)}
 .t-num{font-family:var(--serif);font-size:.85rem;font-weight:700;color:var(--gold);min-width:1.4rem}
 .t-title{font-size:.82rem;font-weight:500;color:var(--body)}
@@ -112,23 +112,24 @@ section{padding:88px 5%}
 .dcard-wrap{display:flex;flex-direction:column;align-items:center;gap:2rem}
 .dcard-lbl{font-size:.72rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
 .biz-card{width:680px;max-width:100%;height:360px;background:linear-gradient(135deg,#162847 0%,#1e3a5f 50%,#162847 100%);border-radius:22px;display:flex;overflow:hidden;box-shadow:0 28px 72px rgba(9,23,45,.35);position:relative}
-.biz-pat{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.032) 1px,transparent 1px);background-size:22px 22px}
-.biz-bar{position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--gold),var(--gold-l),var(--gold));border-radius:22px 0 0 22px}
-.biz-l{width:190px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;padding:1.8rem 1rem;border-right:1px solid rgba(255,255,255,.06);position:relative;z-index:1}
-.biz-mono{width:82px;height:82px;border-radius:50%;background:linear-gradient(135deg,#2a6de0 0%,#0d2244 100%);border:2px solid rgba(196,154,60,.45);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:2rem;font-weight:700;color:#fff}
-.biz-icai{font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);text-align:center;line-height:1.7}
-.biz-r{flex:1;padding:1.8rem 2rem 1.8rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:1}
-.biz-badge{display:inline-flex;align-items:center;gap:.35rem;background:rgba(196,154,60,.12);border:1px solid rgba(196,154,60,.3);color:var(--gold-l);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .65rem;border-radius:100px;margin-bottom:.8rem;width:fit-content}
+.biz-pat{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:22px 22px}
+.biz-bar{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(180deg,#c49a3c,#f0cc6a,#c49a3c);border-radius:22px 0 0 22px}
+.biz-l{width:200px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;padding:1.8rem 1rem;border-right:1px solid rgba(255,255,255,.08);position:relative;z-index:1}
+.biz-mono{width:86px;height:86px;border-radius:50%;background:linear-gradient(135deg,#3a7ee0,#0d2550);border:2.5px solid rgba(196,154,60,.55);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:2.2rem;font-weight:700;color:#fff}
+.biz-icai{font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-align:center;line-height:1.7}
+.biz-r{flex:1;padding:1.8rem 1.8rem 1.8rem 1.6rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:1}
+.biz-badge{display:inline-flex;align-items:center;background:rgba(196,154,60,.18);border:1px solid rgba(196,154,60,.5);color:#f0cc6a;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .75rem;border-radius:100px;margin-bottom:.75rem;width:fit-content}
 .biz-name{font-family:var(--serif);font-weight:700;font-size:1.5rem;color:#fff;line-height:1.12;white-space:nowrap}
-.biz-role-txt{font-size:.7rem;color:rgba(255,255,255,.42);margin-top:.35rem}
-.biz-div{width:32px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-l));border-radius:2px;margin:.85rem 0}
-.biz-contacts{display:flex;flex-direction:column;gap:.5rem}
-.biz-row{display:flex;align-items:center;gap:.5rem;font-size:.74rem;color:rgba(255,255,255,.65)}
-.biz-row svg{opacity:.55;flex-shrink:0}
+.biz-role-txt{font-size:.72rem;color:rgba(255,255,255,.55);margin-top:.35rem}
+.biz-div{width:48px;height:3px;background:linear-gradient(90deg,#c49a3c,#f0cc6a);border-radius:2px;margin:.85rem 0}
+.biz-contacts{display:flex;flex-direction:column;gap:.55rem}
+.biz-row{display:flex;align-items:center;gap:.6rem;font-size:.76rem;color:rgba(255,255,255,.8)}
+.biz-ico{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(255,255,255,.12)}
+.biz-ico.li{background:rgba(10,102,194,.75)}
 .biz-bot{display:flex;justify-content:space-between;align-items:flex-end}
 .biz-tags{display:flex;gap:.35rem;flex-wrap:wrap}
-.biz-etag{font-size:.58rem;font-weight:600;color:rgba(255,255,255,.3);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);padding:.18rem .5rem;border-radius:100px}
-.biz-site{font-family:var(--serif);font-size:.68rem;color:rgba(255,255,255,.18)}
+.biz-etag{font-size:.62rem;font-weight:600;color:rgba(255,255,255,.65);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:.2rem .55rem;border-radius:100px}
+.biz-site{font-family:var(--serif);font-size:.7rem;color:rgba(255,255,255,.3)}
 .dcard-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
 .dl-status{font-size:.8rem;color:var(--muted);text-align:center;min-height:1.2rem;margin-top:.5rem}
 .dl-status.ok{color:#16a34a}.dl-status.err{color:#dc2626}
@@ -200,7 +201,7 @@ section{padding:88px 5%}
 #contact{background:var(--navy)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
 .c-rows{display:flex;flex-direction:column;gap:.85rem;margin-top:1.8rem}
-.c-row{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:all .22s}
+.c-row{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;text-decoration:none;transition:all .22s;cursor:pointer}
 .c-row:hover{background:rgba(255,255,255,.11);transform:translateX(4px)}
 .c-ico{width:40px;height:40px;background:rgba(42,109,224,.28);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .c-lbl{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.38);margin-bottom:.18rem}
@@ -226,6 +227,7 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
 .ft-nav a{font-size:.75rem;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
 .ft-nav a:hover{color:rgba(255,255,255,.55)}
 
+/* RESPONSIVE */
 @media(max-width:1024px){
   #hero{grid-template-columns:1fr}
   .hero-r{height:60vw;max-height:500px;min-height:280px;order:-1}
@@ -290,9 +292,9 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
       <div><div class="stat-v">FP&amp;A</div><div class="stat-l">Core Expertise</div></div>
     </div>
     <div class="teasers">
-      <span class="teaser" onclick="openArt(0)"><span class="t-num">01</span><span class="t-title">Budget vs Forecast &ndash; What Businesses Get Wrong</span><span class="t-arr">&#8594;</span></span>
-      <span class="teaser" onclick="openArt(1)"><span class="t-num">02</span><span class="t-title">Financial Metrics Every CEO Should Track</span><span class="t-arr">&#8594;</span></span>
-      <span class="teaser" onclick="openArt(2)"><span class="t-num">03</span><span class="t-title">Why Most Financial Forecast Models Fail</span><span class="t-arr">&#8594;</span></span>
+      <div class="teaser" onclick="openArt(0)"><span class="t-num">01</span><span class="t-title">Budget vs Forecast &ndash; What Businesses Get Wrong</span><span class="t-arr">&#8594;</span></div>
+      <div class="teaser" onclick="openArt(1)"><span class="t-num">02</span><span class="t-title">Financial Metrics Every CEO Should Track</span><span class="t-arr">&#8594;</span></div>
+      <div class="teaser" onclick="openArt(2)"><span class="t-num">03</span><span class="t-title">Why Most Financial Forecast Models Fail</span><span class="t-arr">&#8594;</span></div>
     </div>
   </div>
   <div class="hero-r">
@@ -369,7 +371,7 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
   <div class="dcard-wrap">
     <span class="dcard-lbl">Preview</span>
     <div style="width:100%;max-width:700px" class="reveal">
-      <div class="biz-card" id="bizCard">
+      <div class="biz-card">
         <div class="biz-pat"></div><div class="biz-bar"></div>
         <div class="biz-l">
           <div class="biz-mono">AK</div>
@@ -377,17 +379,17 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
         </div>
         <div class="biz-r">
           <div>
-            <div class="biz-badge">&#10022; CA &middot; ICAI Qualified</div>
+            <div class="biz-badge">CA &middot; ICAI QUALIFIED</div>
             <div class="biz-name">CA Akshay K Kothari</div>
             <div class="biz-role-txt">FP&amp;A Professional &middot; Strategic Finance &middot; Freelance Consulting</div>
             <div class="biz-div"></div>
             <div class="biz-contacts">
-              <div class="biz-row"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>+91 98366 65840</div>
-              <div class="biz-row"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1576743b747e7e7a617d74677c557278747c793b767a78">[email&#160;protected]</a></div>
-              <div class="biz-row"><svg width="12" height="12" viewBox="0 0 24 24" fill="rgba(255,255,255,0.55)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>linkedin.com/in/akkothari</div>
+              <div class="biz-row"><div class="biz-ico"><svg width="12" height="12" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div>+91 98366 65840</div>
+              <div class="biz-row" id="cardEmail"><div class="biz-ico"><svg width="12" height="12" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span id="cardEmailTxt"></span></div>
+              <div class="biz-row"><div class="biz-ico li"><svg width="11" height="11" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>linkedin.com/in/akkothari</div>
             </div>
           </div>
-          <div class="biz-bot">
+          <div style="display:flex;justify-content:space-between;align-items:flex-end">
             <div class="biz-tags"><span class="biz-etag">FP&amp;A</span><span class="biz-etag">Modelling</span><span class="biz-etag">Strategy</span><span class="biz-etag">8+ yrs</span></div>
             <div class="biz-site">askakshay.com</div>
           </div>
@@ -422,8 +424,8 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
     <div class="tool-card reveal"><div class="tool-top"><div class="tool-icon ti-gr"><svg width="22" height="22" fill="none" stroke="#16a34a" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span class="tool-soon">Coming Soon</span></div><h3>Startup Financial Plan</h3><p>3-year projection template for early-stage startups with unit economics and runway calculator.</p><div class="tool-foot"><span class="tool-fmt">&#128202; Excel</span><span class="tool-dl">Download &#8594;</span></div></div>
   </div>
   <div class="tools-notify reveal">
-    <div><h4>Get notified when tools go live</h4><p>Templates will be available at <strong>askakshay.com</strong></p></div>
-    <a href="/cdn-cgi/l/email-protection#ef8c8ec18e8484809b878e9d86af88828e8683c18c8082d09c9a8d858a8c9bd2a1809b868996cf828acf98878a81cf9b8080839ccf838e9a818c87" class="btn btn-dark"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>Notify Me</a>
+    <div><h4>Get notified when tools go live</h4><p>Templates launching soon at <strong>askakshay.com</strong></p></div>
+    <button class="btn btn-dark" onclick="notifyMe()"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg>Notify Me</button>
   </div>
 </section>
 
@@ -483,9 +485,9 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
       <div class="gold-bar" style="margin:.8rem 0 1.2rem"></div>
       <p style="font-size:.975rem;color:rgba(255,255,255,.55);line-height:1.75">Whether you need a financial model, a budgeting overhaul, or a strategic finance partner &mdash; I'm available for freelance engagements.</p>
       <div class="c-rows">
-        <a href="tel:+919836665840" class="c-row"><div class="c-ico"><svg width="17" height="17" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div><div><div class="c-lbl">Phone</div><div class="c-val">+91 98366 65840</div></div></a>
-        <a href="/cdn-cgi/l/email-protection#2142400f404a4a4e554940534861464c40484d0f424e4c" class="c-row"><div class="c-ico"><svg width="17" height="17" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="c-lbl">Email</div><div class="c-val"><span class="__cf_email__" data-cfemail="ee8d8fc08f8585819a868f9c87ae89838f8782c08d8183">[email&#160;protected]</span></div></div></a>
-        <a href="https://www.linkedin.com/in/akkothari/" target="_blank" rel="noopener" class="c-row"><div class="c-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="c-lbl">LinkedIn</div><div class="c-val">linkedin.com/in/akkothari</div></div></a>
+        <div class="c-row" onclick="window.location='tel:+919836665840'"><div class="c-ico"><svg width="17" height="17" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg></div><div><div class="c-lbl">Phone</div><div class="c-val">+91 98366 65840</div></div></div>
+        <div class="c-row" id="emailRow"><div class="c-ico"><svg width="17" height="17" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="c-lbl">Email</div><div class="c-val" id="emailTxt"></div></div></div>
+        <div class="c-row" onclick="window.open('https://www.linkedin.com/in/akkothari/','_blank')"><div class="c-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="c-lbl">LinkedIn</div><div class="c-val">linkedin.com/in/akkothari</div></div></div>
       </div>
     </div>
     <div class="reveal">
@@ -513,26 +515,35 @@ footer{background:#060e1b;padding:1.6rem 5%;display:flex;align-items:center;just
   </nav>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-// NAV scroll
+<script>
+// Email set via JS only
+var _e = 'ca.akkothari' + '@' + 'gmail.com';
+document.getElementById('emailTxt').textContent = _e;
+document.getElementById('emailRow').onclick = function(){ window.location = 'mailto:' + _e; };
+document.getElementById('cardEmailTxt').textContent = _e;
+document.querySelectorAll('.art-cta a').forEach(function(a){
+  if(a.textContent.indexOf('Consultation') > -1) a.setAttribute('data-email', _e);
+});
+
+// ── NAV ──
 window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('sc',window.scrollY>30)});
 function toggleMenu(){document.getElementById('navLinks').classList.toggle('open')}
 document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open')})});
 
-// Reveal on scroll
+// ── SCROLL REVEAL ──
 var obs=new IntersectionObserver(function(entries){entries.forEach(function(e,i){if(e.isIntersecting)setTimeout(function(){e.target.classList.add('in')},i*60)})},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
 
 // ── ARTICLES ──
 var ARTS=[
-{tag:'Budgeting · FP&A',title:'Budget vs Forecast – What Businesses Get Wrong',meta:'CA Akshay K Kothari &nbsp;&middot;&nbsp; 5 min read &nbsp;&middot;&nbsp; FP&A &middot; Strategic Finance',cta:'Need help building a <strong>forecasting framework</strong> for your business?',
-body:'<h2>The Confusion That Costs Businesses Millions</h2><p>In over 8 years of working across FP&A functions, I’ve seen one mistake repeat itself across industries and company sizes: <strong>businesses treat their annual budget as their forecast.</strong> They set a number in December, lock it in, and spend the next 12 months measuring actuals against a plan that stopped being relevant by February.</p><div class="art-callout"><p>“A budget is a commitment. A forecast is the truth. Confusing the two is like steering a ship using last year’s weather report.”</p></div><h2>What a Budget Actually Is</h2><p>A budget is a <strong>fixed financial plan</strong> set at the start of a period — usually annually. It reflects goals, resource allocation, and performance targets.</p><ul><li>Created once, typically in Q4 for the following year</li><li>Used to authorise spending and set departmental targets</li><li>A benchmark against which performance is measured</li><li>Largely static — it doesn’t change when reality does</li></ul><p>The budget answers: <strong>“What did we plan to achieve?”</strong></p><h2>What a Forecast Actually Is</h2><p>A forecast is a <strong>dynamic, rolling estimate</strong> of where the business is actually headed — updated regularly based on new data and operational changes.</p><ul><li>Updated monthly or quarterly throughout the year</li><li>Based on the latest actuals, trends, and business intelligence</li><li>A decision-making tool, not a performance target</li><li>Forward-looking — focused on what’s coming, not what was planned</li></ul><p>The forecast answers: <strong>“Where are we actually going?”</strong></p><h2>Side-by-Side Comparison</h2><table class="art-tbl"><thead><tr><th>Dimension</th><th>Budget</th><th>Forecast</th></tr></thead><tbody><tr><td>Purpose</td><td>Planning &amp; accountability</td><td>Decision-making</td></tr><tr><td>Frequency</td><td>Annual</td><td>Monthly / Rolling</td></tr><tr><td>Flexibility</td><td>Fixed</td><td>Dynamic</td></tr><tr><td>Question answered</td><td>What did we plan?</td><td>Where are we going?</td></tr><tr><td>Outdated by</td><td>Month 2–3</td><td>Never (if updated)</td></tr></tbody></table><h2>The Three Biggest Mistakes</h2><p><strong>1. Using the budget as the only financial truth.</strong> If your market shifted in Q1, your Q3 budget variance is meaningless — yet most businesses keep reporting against it without questioning whether the plan is still valid.</p><p><strong>2. Updating forecasts only when things go wrong.</strong> Forecasting should be continuous. Waiting until revenue misses means you’ve already lost decision time.</p><p><strong>3. Not separating the two in reporting.</strong> Your management pack should show actuals vs. budget AND actuals vs. latest forecast — together. Budget shows how far you’ve drifted from the plan. Forecast shows where you’ll end up.</p><h2>What Best-Practice Looks Like</h2><p>High-performing finance teams maintain both in parallel. Budget is locked for incentive targets. A rolling 12-month forecast is updated monthly. The gap between budget and forecast is actively managed — not ignored.</p><div class="art-callout"><p>If your business only has a budget and no forecast, you’re not managing your finances — you’re just hoping the plan holds.</p></div><div class="art-author"><div class="art-av">AK</div><div><div class="art-an">CA Akshay K Kothari</div><div class="art-ar">FP&A Professional &middot; Chartered Accountant &middot; askakshay.com</div></div></div>'},
+{tag:'Budgeting \u00b7 FP&A',title:'Budget vs Forecast \u2013 What Businesses Get Wrong',meta:'CA Akshay K Kothari \u00a0\u00b7\u00a0 5 min read \u00a0\u00b7\u00a0 FP&A \u00b7 Strategic Finance',cta:'Need help building a <strong>forecasting framework</strong> for your business?',
+body:'<h2>The Confusion That Costs Businesses Millions</h2><p>In over 8 years of working across FP&A functions, I\u2019ve seen one mistake repeat itself across industries and company sizes: <strong>businesses treat their annual budget as their forecast.</strong> They set a number in December, lock it in, and spend the next 12 months measuring actuals against a plan that stopped being relevant by February.</p><div class="art-callout"><p>\u201cA budget is a commitment. A forecast is the truth. Confusing the two is like steering a ship using last year\u2019s weather report.\u201d</p></div><h2>What a Budget Actually Is</h2><p>A budget is a <strong>fixed financial plan</strong> set at the start of a period \u2014 usually annually.</p><ul><li>Created once, typically in Q4 for the following year</li><li>Used to authorise spending and set departmental targets</li><li>A benchmark against which performance is measured</li><li>Largely static \u2014 it doesn\u2019t change when reality does</li></ul><p>The budget answers: <strong>\u201cWhat did we plan to achieve?\u201d</strong></p><h2>What a Forecast Actually Is</h2><p>A forecast is a <strong>dynamic, rolling estimate</strong> of where the business is headed \u2014 updated regularly based on new data.</p><ul><li>Updated monthly or quarterly throughout the year</li><li>Based on the latest actuals, trends, and business intelligence</li><li>A decision-making tool, not a performance target</li><li>Forward-looking \u2014 focused on what\u2019s coming, not what was planned</li></ul><p>The forecast answers: <strong>\u201cWhere are we actually going?\u201d</strong></p><h2>Side-by-Side Comparison</h2><table class="art-tbl"><thead><tr><th>Dimension</th><th>Budget</th><th>Forecast</th></tr></thead><tbody><tr><td>Purpose</td><td>Planning &amp; accountability</td><td>Decision-making</td></tr><tr><td>Frequency</td><td>Annual</td><td>Monthly / Rolling</td></tr><tr><td>Flexibility</td><td>Fixed</td><td>Dynamic</td></tr><tr><td>Question answered</td><td>What did we plan?</td><td>Where are we going?</td></tr><tr><td>Outdated by</td><td>Month 2\u20133</td><td>Never (if updated)</td></tr></tbody></table><h2>The Three Biggest Mistakes</h2><p><strong>1. Using the budget as the only financial truth.</strong> If your market shifted in Q1, your Q3 budget variance is meaningless \u2014 yet most businesses keep reporting against it.</p><p><strong>2. Updating forecasts only when things go wrong.</strong> Forecasting should be continuous. Waiting until revenue misses means you\u2019ve already lost decision time.</p><p><strong>3. Not separating the two in reporting.</strong> Your management pack should show actuals vs. budget AND actuals vs. latest forecast \u2014 together.</p><h2>What Best-Practice Looks Like</h2><p>High-performing finance teams maintain both in parallel. Budget is locked for incentive targets. A rolling 12-month forecast is updated monthly. The gap between budget and forecast is actively managed \u2014 not ignored.</p><div class="art-callout"><p>If your business only has a budget and no forecast, you\u2019re not managing your finances \u2014 you\u2019re just hoping the plan holds.</p></div><div class="art-author"><div class="art-av">AK</div><div><div class="art-an">CA Akshay K Kothari</div><div class="art-ar">FP&A Professional \u00b7 Chartered Accountant \u00b7 askakshay.com</div></div></div>'},
 
-{tag:'KPIs · Performance',title:'Financial Metrics Every CEO Should Track',meta:'CA Akshay K Kothari &nbsp;&middot;&nbsp; 6 min read &nbsp;&middot;&nbsp; KPIs &middot; Strategic Finance',cta:'Want a <strong>custom KPI dashboard</strong> built for your business?',
-body:'<h2>Revenue Is Not the Story</h2><p>Most CEOs know their top-line revenue number. Far fewer know their <strong>net cash generated from operations this month</strong>, their <strong>customer acquisition cost trend</strong>, or their <strong>working capital cycle</strong>. This gap is where financial decisions go wrong.</p><div class="art-callout"><p>“Revenue is vanity, profit is sanity, cash is reality. Track all three — but understand what drives each.”</p></div><h2>1. Profitability Metrics</h2><p><strong>Gross Profit Margin</strong> — Revenue minus cost of goods sold as a percentage. A declining gross margin is a warning signal, regardless of revenue growth.</p><p><strong>EBITDA Margin</strong> — Operating profitability before interest, tax, depreciation, and amortisation. The most commonly used measure for comparing companies or periods.</p><p><strong>Net Profit Margin</strong> — The bottom line after everything. Important, but often misleading in isolation — context and trend matter more.</p><h2>2. Liquidity &amp; Cash Metrics</h2><p><strong>Operating Cash Flow (OCF)</strong> — Cash generated from core operations. More important than profit for day-to-day health. Companies go bankrupt due to cash problems, not profit problems.</p><p><strong>Cash Conversion Cycle (CCC)</strong> — How many days to convert inventory into cash? A rising CCC is often the first signal of collection or inventory problems before they hit the P&amp;L.</p><p><strong>Current Ratio</strong> — Current assets divided by current liabilities. A ratio below 1 means short-term liabilities exceed assets — investigate immediately.</p><h2>3. Growth &amp; Efficiency Metrics</h2><ul><li><strong>Revenue Growth Rate (MoM / YoY)</strong> — The pace of growth, not just the level</li><li><strong>Revenue per Employee</strong> — A proxy for operational efficiency</li><li><strong>Customer Acquisition Cost (CAC)</strong> — What it costs to win a new customer</li><li><strong>Customer Lifetime Value (LTV)</strong> — What that customer is worth over time</li><li><strong>LTV:CAC Ratio</strong> — If below 3:1, your growth is likely unsustainable</li></ul><h2>The CEO Dashboard: What to Review</h2><table class="art-tbl"><thead><tr><th>Metric</th><th>Frequency</th><th>Why It Matters</th></tr></thead><tbody><tr><td>Revenue vs Budget / Forecast</td><td>Weekly</td><td>Are we on track?</td></tr><tr><td>Cash Balance &amp; Runway</td><td>Weekly</td><td>Can we meet obligations?</td></tr><tr><td>Gross Margin %</td><td>Monthly</td><td>Core model health</td></tr><tr><td>EBITDA Margin</td><td>Monthly</td><td>Operating efficiency</td></tr><tr><td>Debtor Days (DSO)</td><td>Monthly</td><td>Collection efficiency</td></tr><tr><td>Operating Cash Flow</td><td>Monthly</td><td>True cash generation</td></tr><tr><td>LTV:CAC</td><td>Quarterly</td><td>Sustainability of growth</td></tr></tbody></table><h2>The Most Overlooked Metric</h2><p><strong>Debtor Days (Days Sales Outstanding)</strong> is the most consistently ignored metric by CEOs. I’ve seen businesses with strong P&amp;Ls in cash crisis simply because DSO crept from 45 to 90 days over 18 months. Track it monthly. Set a target. Make it someone’s job.</p><div class="art-callout"><p>You can’t manage what you don’t measure. But more importantly — you can’t lead where you don’t look.</p></div><div class="art-author"><div class="art-av">AK</div><div><div class="art-an">CA Akshay K Kothari</div><div class="art-ar">FP&A Professional &middot; Chartered Accountant &middot; askakshay.com</div></div></div>'},
+{tag:'KPIs \u00b7 Performance',title:'Financial Metrics Every CEO Should Track',meta:'CA Akshay K Kothari \u00a0\u00b7\u00a0 6 min read \u00a0\u00b7\u00a0 KPIs \u00b7 Strategic Finance',cta:'Want a <strong>custom KPI dashboard</strong> built for your business?',
+body:'<h2>Revenue Is Not the Story</h2><p>Most CEOs know their top-line revenue number. Far fewer know their <strong>net cash generated from operations</strong>, their <strong>customer acquisition cost trend</strong>, or their <strong>working capital cycle</strong>. This gap is where financial decisions go wrong.</p><div class="art-callout"><p>\u201cRevenue is vanity, profit is sanity, cash is reality. Track all three \u2014 but understand what drives each.\u201d</p></div><h2>1. Profitability Metrics</h2><p><strong>Gross Profit Margin</strong> \u2014 Revenue minus COGS as a percentage. A declining gross margin is a warning signal regardless of revenue growth.</p><p><strong>EBITDA Margin</strong> \u2014 Operating profitability before interest, tax, depreciation, and amortisation. The most used measure for comparing companies across periods.</p><p><strong>Net Profit Margin</strong> \u2014 The bottom line after everything. Important but often misleading in isolation \u2014 trend matters more than the point-in-time number.</p><h2>2. Liquidity &amp; Cash Metrics</h2><p><strong>Operating Cash Flow (OCF)</strong> \u2014 Cash generated from core operations. More important than profit for day-to-day health. Companies go bankrupt due to cash problems, not profit problems.</p><p><strong>Cash Conversion Cycle (CCC)</strong> \u2014 Days to convert inventory into cash. A rising CCC is often the first signal of collection or inventory problems before they hit the P&amp;L.</p><p><strong>Current Ratio</strong> \u2014 Current assets divided by current liabilities. Below 1 means short-term liabilities exceed assets \u2014 investigate immediately.</p><h2>3. Growth &amp; Efficiency Metrics</h2><ul><li><strong>Revenue Growth Rate (MoM / YoY)</strong> \u2014 Pace of growth, not just the level</li><li><strong>Revenue per Employee</strong> \u2014 Proxy for operational efficiency</li><li><strong>Customer Acquisition Cost (CAC)</strong> \u2014 What it costs to win a new customer</li><li><strong>Customer Lifetime Value (LTV)</strong> \u2014 What that customer is worth over time</li><li><strong>LTV:CAC Ratio</strong> \u2014 If below 3:1, growth is likely unsustainable</li></ul><h2>The CEO Dashboard</h2><table class="art-tbl"><thead><tr><th>Metric</th><th>Frequency</th><th>Why It Matters</th></tr></thead><tbody><tr><td>Revenue vs Budget/Forecast</td><td>Weekly</td><td>Are we on track?</td></tr><tr><td>Cash Balance &amp; Runway</td><td>Weekly</td><td>Can we meet obligations?</td></tr><tr><td>Gross Margin %</td><td>Monthly</td><td>Core model health</td></tr><tr><td>EBITDA Margin</td><td>Monthly</td><td>Operating efficiency</td></tr><tr><td>Debtor Days (DSO)</td><td>Monthly</td><td>Collection efficiency</td></tr><tr><td>Operating Cash Flow</td><td>Monthly</td><td>True cash generation</td></tr><tr><td>LTV:CAC</td><td>Quarterly</td><td>Sustainability of growth</td></tr></tbody></table><h2>The Most Overlooked Metric</h2><p><strong>Debtor Days (DSO)</strong> is the most consistently ignored metric by CEOs. I\u2019ve seen businesses with strong P&amp;Ls in cash crisis simply because DSO crept from 45 to 90 days over 18 months. Track it monthly. Set a target. Make it someone\u2019s job.</p><div class="art-callout"><p>You can\u2019t manage what you don\u2019t measure. But more importantly \u2014 you can\u2019t lead where you don\u2019t look.</p></div><div class="art-author"><div class="art-av">AK</div><div><div class="art-an">CA Akshay K Kothari</div><div class="art-ar">FP&A Professional \u00b7 Chartered Accountant \u00b7 askakshay.com</div></div></div>'},
 
-{tag:'FP&A · Forecasting',title:'Why Most Financial Forecast Models Fail',meta:'CA Akshay K Kothari &nbsp;&middot;&nbsp; 7 min read &nbsp;&middot;&nbsp; FP&A &middot; Modelling',cta:'Need a <strong>robust financial model</strong> built for your business?',
-body:'<h2>The Problem Isn’t the Spreadsheet</h2><p>I’ve reviewed financial models built by in-house finance teams, Big 4 consultants, and solo CFOs. The ones that fail rarely fail because of a formula error. <strong>They fail because of how they were designed, maintained, and used.</strong></p><h2>1. Built on Assumptions Nobody Owns</h2><p>Every model rests on assumptions: revenue growth rate, margin percentage, headcount additions. The problem begins when those assumptions are buried in formulas, undocumented, and unknown to the people using the model.</p><p><strong>Fix:</strong> Every key assumption should live in a dedicated tab — clearly labelled, with the owner, last-reviewed date, and source.</p><h2>2. Linked to Actuals That Don’t Update</h2><p>A forecast model not fed by regularly updated actuals is a static projection. The update process should be <strong>defined, scheduled, and owned.</strong></p><h2>3. No Scenario Analysis</h2><p>A single-line forecast gives false precision. A well-built model always includes:</p><ul><li><strong>Base case</strong> — most likely outcome based on current trends</li><li><strong>Upside case</strong> — if key assumptions outperform</li><li><strong>Downside case</strong> — if key risks materialise</li></ul><div class="art-callout"><p>“All models are wrong. Some models are useful. The difference lies in how honestly their limitations are communicated.”</p></div><h2>4. Too Granular at the Wrong Level</h2><p><strong>Granularity should match decision-making relevance.</strong> Model in detail where your business has the most leverage. Simplify where precision doesn’t change decisions.</p><h2>5. Disconnected from Operations</h2><p>Finance models fail when built entirely within the finance function. If your revenue forecast isn’t validated by the sales team, it won’t be believed or acted upon. The best processes are <strong>cross-functional.</strong></p><h2>6. Never Stress-Tested</h2><p>Before relying on any model, run stress scenarios: revenue down 20% in Q2, hiring delayed 3 months, key supplier raises costs 15%. If the model can’t handle these, it isn’t ready.</p><h2>7. Not Reviewed Against Actuals</h2><p>Every month, the prior forecast should be compared to actuals — not to judge the forecaster, but to understand what the model is systematically getting wrong.</p><h2>Weak vs Strong Model</h2><table class="art-tbl"><thead><tr><th>Characteristic</th><th>Weak Model</th><th>Strong Model</th></tr></thead><tbody><tr><td>Assumptions</td><td>Hidden in formulas</td><td>Dedicated tab, documented</td></tr><tr><td>Actuals feed</td><td>Manual monthly</td><td>Automated / scheduled</td></tr><tr><td>Scenarios</td><td>Single line</td><td>Base / Upside / Downside</td></tr><tr><td>Granularity</td><td>Uniform detail</td><td>High detail where it matters</td></tr><tr><td>Ownership</td><td>Finance only</td><td>Cross-functional</td></tr><tr><td>Review cadence</td><td>Annually</td><td>Monthly rolling</td></tr><tr><td>Accuracy tracking</td><td>None</td><td>Forecast vs actual logged</td></tr></tbody></table><div class="art-callout"><p>The goal isn’t to predict the future perfectly. It’s to make better decisions, faster, with the information you have.</p></div><div class="art-author"><div class="art-av">AK</div><div><div class="art-an">CA Akshay K Kothari</div><div class="art-ar">FP&A Professional &middot; Chartered Accountant &middot; askakshay.com</div></div></div>'}
+{tag:'FP&A \u00b7 Forecasting',title:'Why Most Financial Forecast Models Fail',meta:'CA Akshay K Kothari \u00a0\u00b7\u00a0 7 min read \u00a0\u00b7\u00a0 FP&A \u00b7 Modelling',cta:'Need a <strong>robust financial model</strong> built for your business?',
+body:'<h2>The Problem Isn\u2019t the Spreadsheet</h2><p>I\u2019ve reviewed financial models built by in-house finance teams, Big 4 consultants, and solo CFOs. The ones that fail rarely fail because of a formula error. <strong>They fail because of how they were designed, maintained, and used.</strong></p><h2>1. Assumptions Nobody Owns</h2><p>Every model rests on assumptions. The problem begins when they are buried in formulas, undocumented, and unknown to the people using the model.</p><p><strong>Fix:</strong> Every key assumption should live in a dedicated tab \u2014 labelled, with owner, last-reviewed date, and source.</p><h2>2. Actuals That Don\u2019t Update</h2><p>A forecast model not fed by regularly updated actuals is a static projection. The update process must be <strong>defined, scheduled, and owned.</strong></p><h2>3. No Scenario Analysis</h2><p>A single-line forecast gives false precision. A well-built model always includes:</p><ul><li><strong>Base case</strong> \u2014 most likely outcome based on current trends</li><li><strong>Upside case</strong> \u2014 if key assumptions outperform</li><li><strong>Downside case</strong> \u2014 if key risks materialise</li></ul><div class="art-callout"><p>\u201cAll models are wrong. Some models are useful. The difference lies in how honestly their limitations are communicated.\u201d</p></div><h2>4. Wrong Granularity</h2><p><strong>Granularity should match decision-making relevance.</strong> Model in detail where your business has the most leverage. Simplify where precision doesn\u2019t change decisions.</p><h2>5. Disconnected from Operations</h2><p>If your revenue forecast isn\u2019t validated by the sales team, it won\u2019t be believed or acted upon. The best forecasting processes are <strong>cross-functional.</strong></p><h2>6. Never Stress-Tested</h2><p>Before relying on any model, run stress scenarios: revenue down 20%, hiring delayed 3 months, key supplier raises costs 15%. If the model can\u2019t handle these, it isn\u2019t ready.</p><h2>7. Not Reviewed Against Actuals</h2><p>Every month, the prior forecast should be compared to actuals \u2014 not to judge, but to understand what the model is systematically getting wrong.</p><h2>Weak vs Strong Model</h2><table class="art-tbl"><thead><tr><th>Characteristic</th><th>Weak Model</th><th>Strong Model</th></tr></thead><tbody><tr><td>Assumptions</td><td>Hidden in formulas</td><td>Dedicated tab, documented</td></tr><tr><td>Actuals feed</td><td>Manual monthly</td><td>Automated / scheduled</td></tr><tr><td>Scenarios</td><td>Single line</td><td>Base / Upside / Downside</td></tr><tr><td>Granularity</td><td>Uniform detail</td><td>High detail where it matters</td></tr><tr><td>Ownership</td><td>Finance only</td><td>Cross-functional</td></tr><tr><td>Review cadence</td><td>Annually</td><td>Monthly rolling</td></tr><tr><td>Accuracy tracking</td><td>None</td><td>Forecast vs actual logged</td></tr></tbody></table><div class="art-callout"><p>The goal isn\u2019t to predict the future perfectly. It\u2019s to make better decisions, faster, with the information you have.</p></div><div class="art-author"><div class="art-av">AK</div><div><div class="art-an">CA Akshay K Kothari</div><div class="art-ar">FP&A Professional \u00b7 Chartered Accountant \u00b7 askakshay.com</div></div></div>'}
 ];
 
 function openArt(i){
@@ -557,162 +568,103 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeArt()})
 function submitForm(){
   var n=document.getElementById('cfName').value.trim();
   var c=document.getElementById('cfContact').value.trim();
-  var m=document.getElementById('cfMsg').value.trim();
+  var msg=document.getElementById('cfMsg').value.trim();
   var s=document.getElementById('cfStatus');
-  if(!n||!c||!m){s.textContent='Please fill in all fields.';s.className='cf-msg cf-err';return}
-  var body='Name: '+n+'%0AContact: '+c+'%0A%0AMessage:%0A'+encodeURIComponent(m);
-  window.location.href='mailto:ca.akkothari@gmail.com?subject=Consultation Request from '+encodeURIComponent(n)+'&body='+body;
-  s.textContent='✓ Opening your email app — message is pre-filled and ready to send!';
+  if(!n||!c||!msg){s.textContent='Please fill in all fields.';s.className='cf-msg cf-err';return}
+  var body='Name: '+n+'%0AContact: '+c+'%0A%0AMessage:%0A'+encodeURIComponent(msg);
+  window.location.href='mailto:'+_e+'?subject=Consultation Request from '+encodeURIComponent(n)+'&body='+body;
+  s.textContent='\u2713 Opening your email app \u2014 message pre-filled and ready to send!';
   s.className='cf-msg cf-ok';
   document.getElementById('cfName').value='';
   document.getElementById('cfContact').value='';
   document.getElementById('cfMsg').value='';
 }
 
+function notifyMe(){
+  window.location.href='mailto:'+_e+'?subject=Notify me when tools launch&body=Hi Akshay, please notify me when the Tools %26 Templates go live on askakshay.com.';
+}
+
 // ── DIGITAL CARD ──
 function setSt(msg,t){var s=document.getElementById('dlStatus');s.textContent=msg;s.className='dl-status'+(t?' '+t:'')}
 function rr(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.lineTo(x+w-r,y);c.quadraticCurveTo(x+w,y,x+w,y+r);c.lineTo(x+w,y+h-r);c.quadraticCurveTo(x+w,y+h,x+w-r,y+h);c.lineTo(x+r,y+h);c.quadraticCurveTo(x,y+h,x,y+h-r);c.lineTo(x,y+r);c.quadraticCurveTo(x,y,x+r,y);c.closePath()}
-
-function drawCard(ctx, W, H) {
-  // ── Background ──────────────────────────────────────────
-  var bg = ctx.createLinearGradient(0, 0, W, H);
-  bg.addColorStop(0,   '#162847');
-  bg.addColorStop(0.5, '#1e3a5f');
-  bg.addColorStop(1,   '#162847');
-  rr(ctx, 0, 0, W, H, 24); ctx.fillStyle = bg; ctx.fill();
-  ctx.save(); rr(ctx, 0, 0, W, H, 24); ctx.clip();
-
-  // subtle dot grid
-  ctx.fillStyle = 'rgba(255,255,255,0.03)';
-  for (var gx = 20; gx < W; gx += 30)
-    for (var gy = 20; gy < H; gy += 30) {
-      ctx.beginPath(); ctx.arc(gx, gy, 1, 0, Math.PI*2); ctx.fill();
-    }
-
-  // ── Gold left accent bar ─────────────────────────────────
-  var goldG = ctx.createLinearGradient(0, 0, 0, H);
-  goldG.addColorStop(0,   '#c49a3c');
-  goldG.addColorStop(0.5, '#f0cc6a');
-  goldG.addColorStop(1,   '#c49a3c');
-  ctx.fillStyle = goldG; ctx.fillRect(0, 0, 6, H);
-
-  // ── LEFT PANEL  (x 6–200) ───────────────────────────────
-  var panelW = 194, cx = 103;
-
-  // monogram circle
-  var cg = ctx.createRadialGradient(cx-10, H/2-60, 10, cx, H/2-30, 58);
-  cg.addColorStop(0, '#3a7ee0'); cg.addColorStop(1, '#0d2550');
-  ctx.beginPath(); ctx.arc(cx, H/2-30, 58, 0, Math.PI*2);
-  ctx.fillStyle = cg; ctx.fill();
-  ctx.strokeStyle = 'rgba(196,154,60,0.55)'; ctx.lineWidth = 2.5; ctx.stroke();
-
-  ctx.fillStyle = '#fff';
-  ctx.font = 'bold 36px Georgia, serif';
-  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-  ctx.fillText('AK', cx, H/2-30);
-
-  // credential labels below circle
-  ctx.fillStyle = 'rgba(255,255,255,0.5)';
-  ctx.font = '600 10px Arial, sans-serif';
-  ctx.textAlign = 'center';
-  var lblY = H/2 + 50;
-  ['CHARTERED', 'ACCOUNTANT', 'ICAI'].forEach(function(l, i) {
-    ctx.fillText(l, cx, lblY + i*16);
-  });
-
-  // divider
-  ctx.strokeStyle = 'rgba(255,255,255,0.1)';
-  ctx.lineWidth = 1;
-  ctx.beginPath(); ctx.moveTo(200, 28); ctx.lineTo(200, H-28); ctx.stroke();
-
-  // ── RIGHT PANEL  (x 224 … W-28) ────────────────────────
-  var rX = 224, rW = W - rX - 28;
-
-  // --- Badge pill ---
-  var badgeTxt = 'CA  \u00B7  ICAI QUALIFIED';
-  ctx.font = 'bold 10px Arial, sans-serif';
-  var bw = ctx.measureText(badgeTxt).width + 28;
-  var bx = rX, by = 30, bh = 24;
-  rr(ctx, bx, by, bw, bh, 12);
-  ctx.fillStyle = 'rgba(196,154,60,0.18)'; ctx.fill();
-  ctx.strokeStyle = 'rgba(196,154,60,0.5)'; ctx.lineWidth = 1; ctx.stroke();
-  ctx.fillStyle = '#f0cc6a';
-  ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
-  ctx.fillText(badgeTxt, bx + 14, by + bh/2);
-
-  // --- Name ---
-  ctx.fillStyle = '#ffffff';
-  ctx.font = 'bold 34px Georgia, serif';
-  ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
-  ctx.fillText('CA Akshay K Kothari', rX, 98);
-
-  // --- Role ---
-  ctx.fillStyle = 'rgba(255,255,255,0.55)';
-  ctx.font = '14px Arial, sans-serif';
-  ctx.fillText('FP&A Professional  \u00B7  Strategic Finance  \u00B7  Consulting', rX, 122);
-
-  // --- Gold divider ---
-  var dg2 = ctx.createLinearGradient(rX, 0, rX+60, 0);
-  dg2.addColorStop(0, '#c49a3c'); dg2.addColorStop(1, '#f0cc6a');
-  ctx.fillStyle = dg2; ctx.fillRect(rX, 138, 60, 3);
-
-  // --- Contact rows (fixed Y, no emoji) ---
-  var contacts = [
-    { icon: 'Ph', val: '+91 98366 65840' },
-    { icon: 'Em', val: 'ca.akkothari@gmail.com' },
-    { icon: 'in', val: 'linkedin.com/in/akkothari', blue: true }
+function drawCard(ctx,W,H){
+  // Background
+  var bg=ctx.createLinearGradient(0,0,W,H);
+  bg.addColorStop(0,'#162847');bg.addColorStop(.5,'#1e3a5f');bg.addColorStop(1,'#162847');
+  rr(ctx,0,0,W,H,24);ctx.fillStyle=bg;ctx.fill();
+  ctx.save();rr(ctx,0,0,W,H,24);ctx.clip();
+  // dot grid
+  ctx.fillStyle='rgba(255,255,255,0.035)';
+  for(var gx=20;gx<W;gx+=30)for(var gy=20;gy<H;gy+=30){ctx.beginPath();ctx.arc(gx,gy,1,0,Math.PI*2);ctx.fill()}
+  // gold left bar
+  var gg=ctx.createLinearGradient(0,0,0,H);gg.addColorStop(0,'#c49a3c');gg.addColorStop(.5,'#f0cc6a');gg.addColorStop(1,'#c49a3c');
+  ctx.fillStyle=gg;ctx.fillRect(0,0,6,H);
+  // left panel monogram
+  var cx=103;
+  var cg=ctx.createRadialGradient(cx-10,H/2-60,10,cx,H/2-30,58);cg.addColorStop(0,'#3a7ee0');cg.addColorStop(1,'#0d2550');
+  ctx.beginPath();ctx.arc(cx,H/2-30,58,0,Math.PI*2);ctx.fillStyle=cg;ctx.fill();
+  ctx.strokeStyle='rgba(196,154,60,0.6)';ctx.lineWidth=2.5;ctx.stroke();
+  ctx.fillStyle='#fff';ctx.font='bold 38px Georgia,serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('AK',cx,H/2-30);
+  // credential labels
+  ctx.fillStyle='rgba(255,255,255,0.55)';ctx.font='bold 10px Arial,sans-serif';ctx.textAlign='center';
+  ['CHARTERED','ACCOUNTANT','ICAI'].forEach(function(l,i){ctx.fillText(l,cx,H/2+50+i*17)});
+  // divider line
+  ctx.strokeStyle='rgba(255,255,255,0.1)';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(200,28);ctx.lineTo(200,H-28);ctx.stroke();
+  // RIGHT PANEL
+  var rX=220;
+  // badge
+  var btxt='CA  \u00B7  ICAI QUALIFIED';
+  ctx.font='bold 10px Arial,sans-serif';
+  var bw=ctx.measureText(btxt).width+28;
+  rr(ctx,rX,30,bw,24,12);ctx.fillStyle='rgba(196,154,60,0.2)';ctx.fill();
+  ctx.strokeStyle='rgba(196,154,60,0.55)';ctx.lineWidth=1;rr(ctx,rX,30,bw,24,12);ctx.stroke();
+  ctx.fillStyle='#f0cc6a';ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(btxt,rX+14,42);
+  // Name
+  ctx.fillStyle='#ffffff';ctx.font='bold 36px Georgia,serif';ctx.textAlign='left';ctx.textBaseline='alphabetic';ctx.fillText('CA Akshay K Kothari',rX,104);
+  // Role
+  ctx.fillStyle='rgba(255,255,255,0.6)';ctx.font='15px Arial,sans-serif';ctx.fillText('FP&A Professional  \u00B7  Strategic Finance  \u00B7  Consulting',rX,128);
+  // Gold divider
+  var dg=ctx.createLinearGradient(rX,0,rX+70,0);dg.addColorStop(0,'#c49a3c');dg.addColorStop(1,'#f0cc6a');
+  ctx.fillStyle=dg;ctx.fillRect(rX,144,70,3);
+  // Contacts (no emojis — icon pills only)
+  var contacts=[
+    {ico:'Ph',val:'+91 98366 65840',blue:false},
+    {ico:'Em',val:_e,blue:false},
+    {ico:'in',val:'linkedin.com/in/akkothari',blue:true}
   ];
-  contacts.forEach(function(c, i) {
-    var iy = 162 + i * 30, ix = rX;
-    // icon pill
-    rr(ctx, ix, iy-10, 26, 20, 5);
-    ctx.fillStyle = c.blue ? 'rgba(10,102,194,0.75)' : 'rgba(255,255,255,0.12)';
-    ctx.fill();
-    ctx.fillStyle = '#fff';
-    ctx.font = 'bold 9px Arial, sans-serif';
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillText(c.icon, ix+13, iy);
-    // value
-    ctx.fillStyle = 'rgba(255,255,255,0.82)';
-    ctx.font = '13px Arial, sans-serif';
-    ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
-    ctx.fillText(c.val, ix + 34, iy);
+  contacts.forEach(function(c,i){
+    var iy=172+i*32,ix=rX;
+    rr(ctx,ix,iy-11,28,22,5);ctx.fillStyle=c.blue?'rgba(10,102,194,0.8)':'rgba(255,255,255,0.15)';ctx.fill();
+    ctx.fillStyle='#fff';ctx.font='bold 9px Arial,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(c.ico,ix+14,iy);
+    ctx.fillStyle='rgba(255,255,255,0.88)';ctx.font='14px Arial,sans-serif';ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(c.val,ix+36,iy);
   });
-
-  // --- Tags row ---
-  var tags = ['FP&A','Modelling','Strategy','8+ yrs'];
-  ctx.font = 'bold 10px Arial, sans-serif';
-  var tx = rX, ty = H - 36;
-  tags.forEach(function(t) {
-    var tw = ctx.measureText(t).width + 18;
-    rr(ctx, tx, ty-12, tw, 24, 12);
-    ctx.fillStyle = 'rgba(255,255,255,0.08)'; ctx.fill();
-    ctx.strokeStyle = 'rgba(255,255,255,0.18)'; ctx.lineWidth = 1; ctx.stroke();
-    ctx.fillStyle = 'rgba(255,255,255,0.65)';
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillText(t, tx + tw/2, ty);
-    tx += tw + 8;
+  // Tags
+  var tags=['FP&A','Modelling','Strategy','8+ yrs'],tx=rX,ty=H-38;
+  ctx.font='bold 10px Arial,sans-serif';
+  tags.forEach(function(t){
+    var tw=ctx.measureText(t).width+18;
+    rr(ctx,tx,ty-13,tw,26,13);ctx.fillStyle='rgba(255,255,255,0.1)';ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,0.22)';ctx.lineWidth=1;rr(ctx,tx,ty-13,tw,26,13);ctx.stroke();
+    ctx.fillStyle='rgba(255,255,255,0.75)';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(t,tx+tw/2,ty);tx+=tw+8;
   });
-
-  // --- Website ---
-  ctx.fillStyle = 'rgba(255,255,255,0.25)';
-  ctx.font = '11px Georgia, serif';
-  ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
-  ctx.fillText('askakshay.com', W - 28, H - 28);
-
+  // Website
+  ctx.fillStyle='rgba(255,255,255,0.28)';ctx.font='11px Georgia,serif';ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillText('askakshay.com',W-28,H-28);
   ctx.restore();
 }
-
 function dlPNG(){
   var btn=document.getElementById('btnDL');btn.disabled=true;btn.textContent='Generating...';setSt('Drawing...');
   try{
-    var W=860, H=440, cv=document.createElement('canvas');
-    cv.width=W*2; cv.height=H*2;
-    var ctx=cv.getContext('2d'); ctx.scale(2,2);
-    drawCard(ctx,W,H);
-    cv.toBlob(function(blob){var url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='CA-Akshay-K-Kothari-Card.png';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);setSt('Downloaded!','ok');setTimeout(function(){setSt('')},3000)},'image/png')
+    var W=860,H=440,cv=document.createElement('canvas');cv.width=W*2;cv.height=H*2;
+    var ctx=cv.getContext('2d');ctx.scale(2,2);drawCard(ctx,W,H);
+    cv.toBlob(function(blob){var url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='CA-Akshay-K-Kothari-Card.png';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);setSt('Downloaded!','ok');setTimeout(function(){setSt('')},3000)},'image/png');
   }catch(e){setSt('Error: '+e.message,'err')}
   btn.disabled=false;btn.textContent='Download Card (PNG)';
 }
 function dlVCard(){
-  var v=['BEGIN:VCARD','VERSION:3.0','FN:CA Akshay K Kothari','N:Kothari;Akshay;K;;CA','TITLE:FP&A Professional | Strategic Finance','ORG:CA Akshay K Kothari - Finance Consulting','TEL;TYPE=CELL:+919836665840','EMAIL;TYPE=WORK:ca.akkothari@gmail.com','URL
+  var v=['BEGIN:VCARD','VERSION:3.0','FN:CA Akshay K Kothari','N:Kothari;Akshay;K;;CA','TITLE:FP&A Professional | Strategic Finance','ORG:CA Akshay K Kothari - Finance Consulting','TEL;TYPE=CELL:+919836665840','EMAIL;TYPE=WORK:'+_e,'URL:https://www.linkedin.com/in/akkothari/','NOTE:Chartered Accountant (ICAI) | 8+ years in FP&A','END:VCARD'].join('\n');
+  var url=URL.createObjectURL(new Blob([v],{type:'text/vcard'})),a=document.createElement('a');a.href=url;a.download='CA-Akshay-K-Kothari.vcf';document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
+  setSt('Contact saved!','ok');setTimeout(function(){setSt('')},3000);
+}
+</script>
+</body>
+</html>
