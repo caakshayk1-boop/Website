@@ -75,7 +75,7 @@ nav {
 .nav-links { display: flex; gap: 2.2rem; list-style: none; }
 .nav-links a {
   font-size: .78rem; font-weight: 600; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--ink-soft);
+  text-transform: uppercase; color: var(--ink-mid);
   transition: color .2s;
 }
 .nav-links a:hover { color: var(--navy); }
@@ -119,7 +119,7 @@ nav {
 .hero-h1 em { font-style: italic; color: var(--gold); }
 .hero-body {
   font-size: 1.02rem; line-height: 1.78;
-  color: var(--ink-mid); max-width: 480px;
+  color: var(--ink); max-width: 480px;
   margin-bottom: 2.4rem;
   opacity: 0; animation: fadeUp .6s .32s forwards;
 }
@@ -155,7 +155,7 @@ nav {
   font-family: "Cormorant Garamond", serif;
   font-size: 2.2rem; font-weight: 700; color: var(--navy); line-height: 1;
 }
-.stat-l { font-size: .72rem; color: var(--ink-pale); margin-top: .25rem; letter-spacing: .05em; text-transform: uppercase; }
+.stat-l { font-size: .72rem; color: var(--ink-mid); margin-top: .25rem; letter-spacing: .05em; text-transform: uppercase; }
 
 /* HERO PHOTO */
 .hero-photo-col {
@@ -183,7 +183,7 @@ nav {
   font-size: 1.15rem; font-weight: 700; color: #fff; letter-spacing: .01em;
 }
 .hero-photo-nameplate .pn-role {
-  font-size: .7rem; color: rgba(255,255,255,.68);
+  font-size: .7rem; color: rgba(255,255,255,.9);
   letter-spacing: .07em; text-transform: uppercase; margin-top: 2px;
 }
 .hero-photo-deco {
@@ -205,7 +205,7 @@ nav {
 }
 .section-sub {
   margin-top: .8rem; font-size: .96rem; line-height: 1.72;
-  color: var(--ink-mid); max-width: 520px;
+  color: var(--ink); max-width: 520px;
 }
 
 /* ═══════════════════════════════════════
@@ -214,9 +214,9 @@ nav {
 #about { background: var(--bg-off); }
 .about-grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 5rem; align-items: start;
+  gap: 5rem; align-items: center;
 }
-.about-body { font-size: .93rem; color: var(--ink-mid); line-height: 1.75; margin-bottom: 2rem; }
+.about-body { font-size: .93rem; color: var(--ink); line-height: 1.75; margin-bottom: 2rem; }
 .cred-list { display: flex; flex-direction: column; gap: .7rem; margin-top: .5rem; }
 .cred {
   display: flex; align-items: flex-start; gap: 1rem;
@@ -225,13 +225,13 @@ nav {
   border-left: 3px solid var(--gold); border-radius: 3px;
 }
 .cred strong { display: block; font-size: .88rem; color: var(--navy); font-weight: 600; margin-bottom: 2px; }
-.cred span { font-size: .77rem; color: var(--ink-pale); }
+.cred span { font-size: .77rem; color: var(--ink-mid); }
 .tools-section { margin-top: 2.2rem; }
 .tools-label { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: .8rem; }
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; }
 .chip {
   background: var(--bg-alt); border: 1px solid var(--rule);
-  color: var(--ink-mid); padding: .3rem .85rem;
+  color: var(--ink); padding: .3rem .85rem;
   border-radius: 30px; font-size: .77rem; font-weight: 500;
 }
 
@@ -253,10 +253,11 @@ nav {
 .svc-card:hover::after { transform: scaleX(1); }
 .svc-n {
   font-family: "Cormorant Garamond", serif;
-  font-size: 3rem; font-weight: 400; color: rgba(11,31,58,.06); line-height: 1; margin-bottom: .5rem;
+  font-size: 2.4rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: .6rem;
+  opacity: .6;
 }
 .svc-name { font-family: "Cormorant Garamond", serif; font-size: 1.22rem; font-weight: 700; color: var(--navy); margin-bottom: .55rem; }
-.svc-desc { font-size: .84rem; color: var(--ink-mid); line-height: 1.65; margin-bottom: 1.1rem; }
+.svc-desc { font-size: .84rem; color: var(--ink); line-height: 1.65; margin-bottom: 1.1rem; }
 .svc-tags { display: flex; flex-wrap: wrap; gap: .35rem; }
 .svc-tag {
   background: var(--gold-bg); color: var(--gold);
@@ -272,7 +273,7 @@ nav {
 #who .eyebrow { color: var(--gold-lt); }
 #who .eyebrow::before { background: var(--gold-lt); }
 #who .section-title { color: #fff; }
-#who .section-sub { color: rgba(255,255,255,.5); }
+#who .section-sub { color: #fff; }
 .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px,1fr)); gap: 1rem; }
 .who-card {
   padding: 1.8rem 1.5rem;
@@ -282,22 +283,23 @@ nav {
 }
 .who-card:hover { background: rgba(184,145,42,.1); border-color: rgba(184,145,42,.35); transform: translateY(-2px); }
 .who-name { font-family: "Cormorant Garamond", serif; font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: .4rem; }
-.who-desc { font-size: .79rem; color: rgba(255,255,255,.48); line-height: 1.55; }
+.who-desc { font-size: .79rem; color: rgba(255,255,255,.88); line-height: 1.55; }
 
 /* ═══════════════════════════════════════
    PROCESS
 ═══════════════════════════════════════ */
 #process { background: var(--bg-alt); }
 .process-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 2rem; counter-reset: step; }
-.step { counter-increment: step; padding-top: 2.8rem; position: relative; }
+.step { counter-increment: step; padding-top: 3.8rem; position: relative; }
 .step::before {
   content: counter(step, decimal-leading-zero);
   font-family: "Cormorant Garamond", serif;
-  font-size: 3.5rem; font-weight: 400; color: rgba(11,31,58,.07);
+  font-size: 3rem; font-weight: 700; color: var(--gold);
   position: absolute; top: 0; left: 0; line-height: 1;
+  opacity: .55;
 }
 .step-title { font-family: "Cormorant Garamond", serif; font-size: 1.08rem; font-weight: 700; color: var(--navy); margin-bottom: .45rem; }
-.step-desc { font-size: .82rem; color: var(--ink-mid); line-height: 1.65; }
+.step-desc { font-size: .82rem; color: var(--ink); line-height: 1.65; }
 
 /* ═══════════════════════════════════════
    CASE STUDIES
@@ -313,7 +315,7 @@ nav {
   font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 1rem;
 }
 .work-title { font-family: "Cormorant Garamond", serif; font-size: 1.12rem; font-weight: 700; color: var(--navy); margin-bottom: .55rem; }
-.work-desc { font-size: .83rem; color: var(--ink-mid); line-height: 1.65; margin-bottom: 1.1rem; }
+.work-desc { font-size: .83rem; color: var(--ink); line-height: 1.65; margin-bottom: 1.1rem; }
 .work-result {
   display: flex; align-items: center; gap: .6rem;
   font-size: .78rem; font-weight: 600; color: #2d7a4f;
@@ -329,7 +331,7 @@ nav {
 .calc-tabs { display: flex; gap: .5rem; margin-bottom: 1.8rem; flex-wrap: wrap; }
 .calc-tab {
   background: var(--bg); border: 1px solid var(--rule);
-  color: var(--ink-soft); padding: .55rem 1.3rem; border-radius: 2px;
+  color: var(--ink-mid); padding: .55rem 1.3rem; border-radius: 2px;
   font-size: .78rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
   transition: all .2s;
 }
@@ -338,9 +340,9 @@ nav {
 .calc-panel.active { display: block; }
 .calc-box { background: var(--bg); border: 1px solid var(--rule-lt); border-radius: 3px; padding: 2rem; }
 .calc-title { font-family: "Cormorant Garamond", serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: .35rem; }
-.calc-sub { font-size: .82rem; color: var(--ink-pale); margin-bottom: 1.4rem; }
+.calc-sub { font-size: .82rem; color: var(--ink-mid); margin-bottom: 1.4rem; }
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
-.field label { display: block; font-size: .68rem; font-weight: 700; color: var(--ink-mid); letter-spacing: .08em; text-transform: uppercase; margin-bottom: .32rem; }
+.field label { display: block; font-size: .68rem; font-weight: 700; color: var(--ink); letter-spacing: .08em; text-transform: uppercase; margin-bottom: .32rem; }
 .field input {
   width: 100%; background: var(--bg-off); border: 1px solid var(--rule);
   color: var(--ink); padding: .7rem .9rem; border-radius: 3px;
@@ -360,7 +362,7 @@ nav {
 }
 .result-box.show { display: block; }
 .result-val { font-family: "Cormorant Garamond", serif; font-size: 2.2rem; font-weight: 700; color: var(--navy); }
-.result-lbl { font-size: .76rem; color: var(--ink-pale); margin-top: 3px; }
+.result-lbl { font-size: .76rem; color: var(--ink-mid); margin-top: 3px; }
 
 /* ═══════════════════════════════════════
    INSIGHTS
@@ -380,15 +382,15 @@ nav {
   font-size: .66rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; margin-bottom: .7rem;
 }
 .insight-title { font-family: "Cormorant Garamond", serif; font-size: 1.08rem; font-weight: 700; color: var(--navy); line-height: 1.38; margin-bottom: .5rem; }
-.insight-expt { font-size: .81rem; color: var(--ink-mid); line-height: 1.6; }
-.insight-foot { padding: .9rem 1.5rem; border-top: 1px solid var(--rule-lt); font-size: .72rem; color: var(--ink-pale); }
+.insight-expt { font-size: .81rem; color: var(--ink); line-height: 1.6; }
+.insight-foot { padding: .9rem 1.5rem; border-top: 1px solid var(--rule-lt); font-size: .72rem; color: var(--ink-mid); }
 
 /* ═══════════════════════════════════════
    DIGITAL CARD
 ═══════════════════════════════════════ */
 #card { background: var(--navy); }
 #card .section-title { color: #fff; }
-#card .section-sub { color: rgba(255,255,255,.48); max-width: 420px; }
+#card .section-sub { color: rgba(255,255,255,.88); max-width: 420px; }
 /* ─── DIGITAL CARD (vertical portrait style) ─── */
 .card-stage { display: flex; justify-content: center; margin-top: 3rem; }
 .biz-card {
@@ -441,7 +443,7 @@ nav {
   position: relative; z-index: 1;
 }
 .card-hero-role {
-  font-size: .78rem; color: rgba(255,255,255,.62); letter-spacing: .02em;
+  font-size: .78rem; color: rgba(255,255,255,.9); letter-spacing: .02em;
   position: relative; z-index: 1;
 }
 
@@ -468,8 +470,8 @@ nav {
 }
 .cc-icon-wrap svg { width: 15px; height: 15px; stroke: var(--navy); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .cc-text { display: flex; flex-direction: column; }
-.cc-label { font-size: .6rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #aaa; line-height: 1; margin-bottom: .2rem; }
-.cc-value { font-size: .79rem; color: #1a2b4a; font-weight: 500; }
+.cc-label { font-size: .6rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-mid); line-height: 1; margin-bottom: .2rem; }
+.cc-value { font-size: .79rem; color: var(--ink); font-weight: 500; }
 
 /* ACTION BUTTONS */
 .card-actions {
@@ -496,7 +498,7 @@ nav {
    CONTACT
 ═══════════════════════════════════════ */
 #contact { background: var(--bg-off); }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .contact-methods { display: flex; flex-direction: column; gap: .75rem; margin-top: 2.2rem; }
 .c-row {
   display: flex; align-items: center; gap: 1rem;
@@ -516,13 +518,13 @@ nav {
 .c-icon.gold-bg { background: var(--gold-bg); color: var(--gold); border: 1px solid rgba(184,145,42,.2); }
 .c-icon.li-bg { background: #0077b5; color: #fff; }
 .c-label strong { display: block; font-size: .88rem; font-weight: 600; color: var(--navy); }
-.c-label span { font-size: .74rem; color: var(--ink-pale); }
-.c-arrow { margin-left: auto; color: var(--ink-pale); font-size: .9rem; }
+.c-label span { font-size: .74rem; color: var(--ink); }
+.c-arrow { margin-left: auto; color: var(--ink); font-size: .9rem; }
 
 .form-box { background: var(--bg); border: 1px solid var(--rule-lt); border-radius: 3px; padding: 2rem; }
 .form-title { font-family: "Cormorant Garamond", serif; font-size: 1.4rem; font-weight: 700; color: var(--navy); margin-bottom: 1.4rem; }
 .fg { margin-bottom: 1rem; }
-.fg label { display: block; font-size: .68rem; font-weight: 700; color: var(--ink-mid); letter-spacing: .08em; text-transform: uppercase; margin-bottom: .32rem; }
+.fg label { display: block; font-size: .68rem; font-weight: 700; color: var(--ink); letter-spacing: .08em; text-transform: uppercase; margin-bottom: .32rem; }
 .fg input, .fg textarea, .fg select {
   width: 100%; background: var(--bg-off); border: 1px solid var(--rule);
   color: var(--ink); padding: .7rem .9rem; border-radius: 3px;
@@ -563,7 +565,7 @@ nav {
   box-shadow: 0 24px 60px rgba(7,22,48,.3);
 }
 .em-title { font-family: "Cormorant Garamond", serif; font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: .25rem; }
-.em-sub { font-size: .79rem; color: var(--ink-pale); margin-bottom: 1.4rem; }
+.em-sub { font-size: .79rem; color: var(--ink-mid); margin-bottom: 1.4rem; }
 .em-opt {
   display: flex; align-items: center; gap: .9rem;
   background: var(--bg-off); border: 1px solid var(--rule-lt); border-radius: 4px;
@@ -572,8 +574,8 @@ nav {
 .em-opt:hover { border-color: var(--navy); }
 .em-opt-icon { width: 30px; height: 30px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: .8rem; font-weight: 800; flex-shrink: 0; }
 .em-opt-text strong { display: block; font-size: .84rem; font-weight: 600; color: var(--navy); }
-.em-opt-text span { font-size: .71rem; color: var(--ink-pale); }
-.em-close { position: absolute; top: .9rem; right: 1rem; background: none; border: none; color: var(--ink-pale); font-size: 1.1rem; line-height: 1; }
+.em-opt-text span { font-size: .71rem; color: var(--ink-mid); }
+.em-close { position: absolute; top: .9rem; right: 1rem; background: none; border: none; color: var(--ink-mid); font-size: 1.1rem; line-height: 1; }
 
 /* ═══════════════════════════════════════
    FOOTER
@@ -584,11 +586,11 @@ footer {
 }
 .f-logo { font-family: "Cormorant Garamond", serif; font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: .3rem; }
 .f-logo span { color: var(--gold); }
-.f-tag { color: rgba(255,255,255,.35); font-size: .78rem; margin-bottom: 1.5rem; }
+.f-tag { color: rgba(255,255,255,.8); font-size: .78rem; margin-bottom: 1.5rem; }
 .f-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.4rem; }
-.f-links a { color: rgba(255,255,255,.38); font-size: .76rem; transition: color .2s; }
+.f-links a { color: rgba(255,255,255,.8); font-size: .76rem; transition: color .2s; }
 .f-links a:hover { color: var(--gold-lt); }
-.f-copy { color: rgba(255,255,255,.18); font-size: .71rem; }
+.f-copy { color: rgba(255,255,255,.6); font-size: .71rem; }
 
 /* ═══════════════════════════════════════
    ANIMATIONS
@@ -606,8 +608,8 @@ footer {
 @media (max-width: 960px) {
   .hero-outer { grid-template-columns: 1fr; gap: 3rem; padding-top: 7rem; }
   .hero-photo-col { max-width: 380px; }
-  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; align-items: start; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; align-items: start; }
   .process-row { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
 @media (max-width: 768px) {
@@ -770,7 +772,7 @@ footer {
     <div class="section-header reveal">
       <div class="eyebrow" style="color:var(--gold-lt);--gold:var(--gold-lt);">Ideal Clients</div>
       <h2 class="section-title" style="color:#fff;">Who I Work With</h2>
-      <p class="section-sub" style="color:rgba(255,255,255,.5);">If you&rsquo;re in one of these categories and need financial clarity, we&rsquo;re probably a great fit.</p>
+      <p class="section-sub" style="color:#fff;">If you&rsquo;re in one of these categories and need financial clarity, we&rsquo;re probably a great fit.</p>
     </div>
     <div class="who-grid reveal">
       <div class="who-card"><div class="who-name">Startups</div><div class="who-desc">Pre-seed to Series B founders needing models for fundraising or runway clarity.</div></div>
@@ -900,7 +902,7 @@ footer {
     <div class="section-header reveal" style="margin-bottom:0;">
       <div class="eyebrow" style="justify-content:center;color:var(--gold-lt);">Digital Card</div>
       <h2 class="section-title" style="color:#fff;">Save My Details</h2>
-      <p class="section-sub" style="color:rgba(255,255,255,.45);margin:0 auto .5rem;">Tap below to call, email, or save contact directly to your phone.</p>
+      <p class="section-sub" style="color:rgba(255,255,255,.88);margin:0 auto .5rem;">Tap below to call, email, or save contact directly to your phone.</p>
     </div>
   </div>
   <div class="card-stage reveal">
@@ -919,13 +921,13 @@ footer {
 
       <!-- CONTACT ROWS -->
       <div class="card-body">
-        <a href="mailto:ca.akkothari@gmail.com" class="card-contact-row">
+        <a href="/cdn-cgi/l/email-protection#80e3e1aee1ebebeff4e8e1f2e9c0e7ede1e9ecaee3efed" class="card-contact-row">
           <div class="cc-icon-wrap">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
           <div class="cc-text">
             <span class="cc-label">Email</span>
-            <span class="cc-value">ca.akkothari@gmail.com</span>
+            <span class="cc-value"><span class="__cf_email__" data-cfemail="a2c1c38cc3c9c9cdd6cac3d0cbe2c5cfc3cbce8cc1cdcf">[email&#160;protected]</span></span>
           </div>
         </a>
         <a href="https://wa.me/919836665840" target="_blank" class="card-contact-row">
@@ -962,7 +964,7 @@ footer {
         <a href="https://wa.me/919836665840?text=Hi%20Akshay%2C%20I%27d%20like%20to%20book%20a%20consultation" target="_blank" class="card-action-btn primary">
           &#9742; Book a Call
         </a>
-        <a href="mailto:ca.akkothari@gmail.com" class="card-action-btn secondary">
+        <a href="/cdn-cgi/l/email-protection#4122206f202a2a2e352920332801262c20282d6f222e2c" class="card-action-btn secondary">
           &#9993; Send Email
         </a>
         <button class="card-action-btn save-full" onclick="saveVCard()">
@@ -984,10 +986,10 @@ footer {
 <section class="section" id="contact" style="background:var(--bg-off);">
   <div class="section-inner">
     <div class="contact-grid">
-      <div class="reveal">
+      <div>
         <div class="eyebrow" style="margin-bottom:.7rem;">Get In Touch</div>
-        <h2 class="section-title">Book a Free<br/>30-min Consultation</h2>
-        <p class="section-sub" style="max-width:100%;margin-bottom:2rem;">Whether you need a financial model, budget system, or a second opinion on your numbers &mdash; let&rsquo;s talk. No sales pitch, just honest advice.</p>
+        <h2 class="section-title" style="color:var(--navy);opacity:1;font-weight:700;">Book a Free<br/>30-min Consultation</h2>
+        <p class="section-sub" style="max-width:100%;margin-bottom:2rem;color:var(--ink);opacity:1;">Whether you need a financial model, budget system, or a second opinion on your numbers &mdash; let&rsquo;s talk. No sales pitch, just honest advice.</p>
         <div class="contact-methods">
           <a href="https://wa.me/919836665840?text=Hi%20Akshay%2C%20I%27d%20like%20to%20book%20a%20consultation" class="c-row wa" target="_blank">
             <div class="c-icon wa-bg">WA</div>
@@ -996,7 +998,7 @@ footer {
           </a>
           <a href="#" class="c-row" id="emailBtn">
             <div class="c-icon gold-bg">@</div>
-            <div class="c-label"><strong>Email</strong><span>ca.akkothari@gmail.com</span></div>
+            <div class="c-label"><strong>Email</strong><span><span class="__cf_email__" data-cfemail="cdaeace3aca6a6a2b9a5acbfa48daaa0aca4a1e3aea2a0">[email&#160;protected]</span></span></div>
             <div class="c-arrow">&#8594;</div>
           </a>
           <a href="https://calendly.com/akkothari" class="c-row" target="_blank">
@@ -1056,7 +1058,7 @@ footer {
     </a>
     <a href="#" id="copyEmailBtn" class="em-opt">
       <div class="em-opt-icon" style="background:var(--gold-bg);color:var(--gold);font-size:.75rem;font-weight:900;">CPY</div>
-      <div class="em-opt-text"><strong>Copy Address</strong><span id="copyLbl">ca.akkothari@gmail.com</span></div>
+      <div class="em-opt-text"><strong>Copy Address</strong><span id="copyLbl"><span class="__cf_email__" data-cfemail="b5d6d49bd4dededac1ddd4c7dcf5d2d8d4dcd99bd6dad8">[email&#160;protected]</span></span></div>
     </a>
     <button class="em-close" onclick="closeEmailModal()">&#10005;</button>
   </div>
@@ -1076,7 +1078,7 @@ footer {
   <div class="f-copy">&copy; 2026 Akshay K Kothari. All rights reserved.</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── NAV ── */
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');}
@@ -1086,6 +1088,7 @@ const revObs = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
 },{threshold:0.09});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+document.querySelectorAll('.reveal').forEach(el=>{ const r=el.getBoundingClientRect(); if(r.top<window.innerHeight) el.classList.add('visible'); });
 
 /* ── ACTIVE NAV ── */
 window.addEventListener('scroll',()=>{
@@ -1302,26 +1305,8 @@ function openArticle(i){
       <span style="background:var(--gold-bg);color:var(--gold);border:1px solid rgba(184,145,42,.2);padding:.2rem .7rem;border-radius:2px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;">${a.tag}</span>
     </div>
     <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:.5rem;">${a.title}</h2>
-    <div style="font-size:.75rem;color:var(--ink-pale);margin-bottom:2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--rule-lt);">${a.time} &middot; Akshay K Kothari</div>
+    <div style="font-size:.75rem;color:var(--ink-mid);margin-bottom:2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--rule-lt);">${a.time} &middot; Akshay K Kothari</div>
     ${a.content}
     <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--rule-lt);display:flex;align-items:center;gap:1rem;">
       <a href="https://wa.me/919836665840?text=Hi%20Akshay%2C%20I%20read%20your%20article%20on%20${encodeURIComponent(a.title)}%20and%20would%20like%20to%20discuss%20further." target="_blank" style="background:var(--navy);color:#fff;padding:.7rem 1.5rem;border-radius:2px;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;">Discuss with Akshay</a>
-      <button onclick="closeArticle()" style="background:none;border:1.5px solid var(--rule);color:var(--ink-mid);padding:.7rem 1.5rem;border-radius:2px;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;">Close</button>
-    </div>
-  `;
-  const m = document.getElementById('articleModal');
-  m.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-  setTimeout(()=>m.scrollTop=0,10);
-}
-function closeArticle(){
-  document.getElementById('articleModal').style.display='none';
-  document.body.style.overflow='';
-}
-document.getElementById('articleModal').addEventListener('click',function(e){
-  if(e.target===this) closeArticle();
-});
-</script>
-
-</body>
-</html>
+      <button onclick="closeArticle()" style="background:none;border:1.5px solid var(--rule);color:var(--ink-mid);padding:.7rem 1.5rem;border-radius:2px;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-t
