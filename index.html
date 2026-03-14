@@ -607,6 +607,23 @@ nav {
    CONTACT
 ═══════════════════════════════════════ */
 #contact { background: var(--bg-off); }
+
+/* ── Contact section: bulletproof text visibility ── */
+#contact .section-title,
+#contact .eyebrow,
+#contact .section-sub,
+#contact .about-body {
+  opacity: 1 !important;
+  color: var(--navy) !important;
+}
+#contact .section-sub {
+  color: var(--ink) !important;
+}
+#contact .contact-grid > div {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .contact-methods { display: flex; flex-direction: column; gap: .75rem; margin-top: 2.2rem; }
 .c-row {
@@ -1458,6 +1475,8 @@ const revObs = new IntersectionObserver(entries=>{
 },{threshold:0.09});
 document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 document.querySelectorAll('.reveal').forEach(el=>{ const r=el.getBoundingClientRect(); if(r.top<window.innerHeight) el.classList.add('visible'); });
+// Force contact section always visible — never let reveal stall on it
+document.querySelectorAll('#contact *').forEach(el=>{ el.classList.remove('reveal'); });
 
 /* ── ACTIVE NAV ── */
 window.addEventListener('scroll',()=>{
