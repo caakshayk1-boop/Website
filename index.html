@@ -1310,7 +1310,7 @@ footer {
 
       <!-- CONTACT ROWS -->
       <div class="card-body">
-        <a href="mailto:ca.akkothari@gmail.com" class="card-contact-row">
+        <a href="#" onclick="openEmailModal();return false;" class="card-contact-row">
           <div class="cc-icon-wrap">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
@@ -1337,15 +1337,6 @@ footer {
             <span class="cc-value">linkedin.com/in/akkothari</span>
           </div>
         </a>
-        <a href="https://calendly.com/akkothari" target="_blank" class="card-contact-row">
-          <div class="cc-icon-wrap">
-            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <div class="cc-text">
-            <span class="cc-label">Book a Meeting</span>
-            <span class="cc-value">calendly.com/akkothari</span>
-          </div>
-        </a>
       </div>
 
       <!-- ACTION BUTTONS -->
@@ -1353,7 +1344,7 @@ footer {
         <a href="https://wa.me/919836665840?text=Hi%20Akshay%2C%20I%27d%20like%20to%20book%20a%20consultation" target="_blank" class="card-action-btn primary">
           &#9742; Book a Call
         </a>
-        <a href="mailto:ca.akkothari@gmail.com" class="card-action-btn secondary">
+        <a href="#" onclick="openEmailModal();return false;" class="card-action-btn secondary">
           &#9993; Send Email
         </a>
         <button class="card-action-btn save-full" onclick="saveVCard()">
@@ -1388,11 +1379,6 @@ footer {
           <a href="#" class="c-row" id="emailBtn">
             <div class="c-icon gold-bg">@</div>
             <div class="c-label"><strong>Email</strong><span>ca.akkothari@gmail.com</span></div>
-            <div class="c-arrow">&#8594;</div>
-          </a>
-          <a href="https://calendly.com/akkothari" class="c-row" target="_blank">
-            <div class="c-icon navy-bg">Cal</div>
-            <div class="c-label"><strong>Calendly</strong><span>Pick a time that works for you</span></div>
             <div class="c-arrow">&#8594;</div>
           </a>
           <a href="https://linkedin.com/in/akkothari" class="c-row" target="_blank">
@@ -1712,15 +1698,4 @@ function closeArticle(){
       <div class="kpi-row"><div class="kpi-num">07</div><div><strong class="kpi-title">MoM Revenue Growth %</strong><span class="kpi-desc">Month-over-month growth rate. For early-stage startups: 10–15% MoM is strong. Know your growth rate alongside absolute numbers.</span></div></div>
       <div class="kpi-row"><div class="kpi-num">08</div><div><strong class="kpi-title">Churn Rate</strong><span class="kpi-desc">% of revenue or customers lost each month. Even 3% monthly churn = ~30% annually. Track gross and net revenue churn separately.</span></div></div>
       <div class="kpi-row"><div class="kpi-num">09</div><div><strong class="kpi-title">Operating Cash Flow</strong><span class="kpi-desc">Profit is an opinion; cash is a fact. Positive operating cash flow is the sign of a self-sustaining business.</span></div></div>
-      <div class="kpi-row"><div class="kpi-num">10</div><div><strong class="kpi-title">Burn Multiple</strong><span class="kpi-desc">Net burn ÷ net new ARR. Measures how efficiently you burn capital to grow. Under 1x is excellent; over 2x is a warning sign.</span></div></div>
-    </div>
-    <div class="article-callout">
-      <strong class="text-navy">Key takeaway:</strong> You don't need a CFO to track these — but you do need to track them. Start with the 3 that most directly reflect your business model, then layer the rest in.
-    </div>
-  </article>
-
-</div>
-
-
-</body>
-</html>
+      <div class="kpi-row"><div class="kpi-num">10</div><div><strong class="kpi-title">Burn Multiple
