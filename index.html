@@ -162,10 +162,10 @@ button { font-family: inherit; cursor: pointer; }
 .serif { font-family: "Cormorant Garamond", serif; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: .6rem;
-  font-size: .72rem; font-weight: 600; letter-spacing: .14em;
+  font-size: .68rem; font-weight: 700; letter-spacing: .18em;
   text-transform: uppercase; color: var(--gold);
 }
-.eyebrow::before { content: ""; display: block; width: 24px; height: 1px; background: var(--gold); }
+.eyebrow::before { content: ""; display: block; width: 20px; height: 1.5px; background: var(--gold); }
 
 /* ═══════════════════════════════════════
    NAV
@@ -220,27 +220,107 @@ nav {
   max-width: 1220px; margin: 0 auto;
 }
 .hero-content { }
-.hero-eyebrow { margin-bottom: 1.5rem; opacity: 0; animation: fadeUp .6s .08s forwards; }
+/* ── HERO REDESIGN — modern / nomad / Gen-Z professional ── */
+.hero-eyebrow { margin-bottom: 1.2rem; opacity: 0; animation: fadeUp .6s .08s forwards; }
+
+/* availability badge */
+.hero-badge {
+  display: inline-flex; align-items: center; gap: .55rem;
+  background: var(--gold-bg); border: 1px solid rgba(184,145,42,.25);
+  padding: .35rem .9rem; border-radius: 30px;
+  font-size: .72rem; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1.6rem;
+  opacity: 0; animation: fadeUp .5s .06s forwards;
+}
+.hero-badge::before {
+  content: ""; display: block; width: 7px; height: 7px;
+  border-radius: 50%; background: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34,197,94,.25);
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(34,197,94,.25); }
+  50%       { box-shadow: 0 0 0 5px rgba(34,197,94,.08); }
+}
+
+/* new heading structure */
 .hero-h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.8rem, 5vw, 4.2rem);
-  font-weight: 700; line-height: 1.08;
-  color: var(--navy); margin-bottom: 1.4rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300; line-height: 1.05;
+  color: var(--navy); margin-bottom: 0;
   opacity: 0; animation: fadeUp .6s .2s forwards;
 }
-.hero-h1 em { font-style: italic; color: var(--gold); }
+.hero-h1 .h1-line1 {
+  display: block;
+  font-size: clamp(1.05rem, 1.6vw, 1.3rem);
+  font-weight: 400; letter-spacing: .04em;
+  color: var(--ink-soft); text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.hero-h1 .h1-big {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3.4rem, 6.5vw, 5.6rem);
+  font-weight: 700; line-height: .95;
+  color: var(--navy); letter-spacing: -.02em;
+  margin-bottom: .2rem;
+}
+.hero-h1 .h1-big em {
+  font-style: italic; color: var(--gold);
+  font-size: 1.08em;
+}
+.hero-h1 .h1-sub {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+  font-weight: 300; color: var(--ink-mid);
+  letter-spacing: -.01em; margin-top: .6rem;
+}
+.hero-h1 .h1-sub strong {
+  font-weight: 600; color: var(--navy);
+}
+
+/* divider accent */
+.hero-divider {
+  display: flex; align-items: center; gap: 1rem;
+  margin: 1.6rem 0;
+  opacity: 0; animation: fadeUp .5s .3s forwards;
+}
+.hero-divider span {
+  display: block; height: 1px; width: 40px; background: var(--gold);
+}
+.hero-divider p {
+  font-size: .84rem; color: var(--ink-soft); line-height: 1.6;
+  font-style: italic; max-width: 360px;
+}
+
 .hero-body {
-  font-size: 1.02rem; line-height: 1.78;
-  color: var(--ink); max-width: 480px;
-  margin-bottom: 2.4rem;
-  opacity: 0; animation: fadeUp .6s .32s forwards;
+  display: none; /* replaced by hero-divider */
 }
-.hero-body strong { color: var(--ink); font-weight: 600; }
 .hero-actions {
-  display: flex; gap: .9rem; flex-wrap: wrap;
-  margin-bottom: 3.5rem;
-  opacity: 0; animation: fadeUp .6s .44s forwards;
+  display: flex; gap: .85rem; flex-wrap: wrap;
+  margin-bottom: 2.8rem;
+  opacity: 0; animation: fadeUp .6s .42s forwards;
 }
+
+/* CTA button refresh */
+.btn-solid {
+  background: var(--navy); color: #fff;
+  padding: .88rem 2rem; border-radius: 2px;
+  font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  border: none; transition: all .22s;
+  display: inline-flex; align-items: center; gap: .5rem;
+}
+.btn-solid:hover { background: var(--gold); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(184,145,42,.25); }
+.btn-outline {
+  background: transparent; color: var(--navy);
+  padding: .88rem 2rem; border-radius: 2px;
+  font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  border: 1.5px solid var(--rule); transition: all .22s;
+  display: inline-flex; align-items: center; gap: .5rem;
+}
+.btn-outline:hover { border-color: var(--navy); background: var(--navy); color: #fff; }
 .btn-solid {
   background: var(--navy); color: #fff;
   padding: .85rem 1.8rem; border-radius: 2px;
@@ -258,16 +338,21 @@ nav {
 }
 .btn-outline:hover { background: var(--navy); color: #fff; }
 .hero-stats {
-  display: flex; gap: 2.8rem; flex-wrap: wrap;
-  padding-top: 2rem; border-top: 1px solid var(--rule);
+  display: flex; gap: 0; flex-wrap: wrap;
+  padding-top: 1.8rem; border-top: 1px solid var(--rule-lt);
   opacity: 0; animation: fadeUp .6s .56s forwards;
 }
-.stat { }
+.stat {
+  padding-right: 2.2rem; margin-right: 2.2rem;
+  border-right: 1px solid var(--rule-lt);
+}
+.stat:last-child { border-right: none; padding-right: 0; margin-right: 0; }
 .stat-n {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2.2rem; font-weight: 700; color: var(--navy); line-height: 1;
+  font-size: 2.6rem; font-weight: 700; color: var(--navy); line-height: 1;
+  letter-spacing: -.02em;
 }
-.stat-l { font-size: .72rem; color: var(--ink-mid); margin-top: .25rem; letter-spacing: .05em; text-transform: uppercase; }
+.stat-l { font-size: .68rem; color: var(--ink-soft); margin-top: .3rem; letter-spacing: .09em; text-transform: uppercase; }
 
 /* HERO PHOTO */
 .hero-photo-col {
@@ -750,7 +835,7 @@ footer {
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .field-row, .fr { grid-template-columns: 1fr; }
-  .hero-h1 { font-size: clamp(2.2rem, 7vw, 3rem); }
+  .hero-h1 .h1-big { font-size: clamp(2.6rem, 9vw, 3.8rem); }
   .section-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
   .card-stage { padding: 0 1rem; }
   .hero-stats { gap: 1.8rem; }
@@ -1042,26 +1127,36 @@ footer {
 <!-- HERO -->
 <div class="hero-outer">
   <div class="hero-content">
-    <div class="eyebrow hero-eyebrow">CA &middot; FP&amp;A Professional &middot; Finance Consultant</div>
+
+    <!-- availability pill -->
+    <div class="hero-badge">Available for new projects</div>
+
+    <!-- headline -->
     <h1 class="hero-h1">
-      I help businesses build<br/>
-      <em>financial clarity</em><br/>
-      and grow with confidence.
+      <span class="h1-line1">Chartered Accountant &middot; FP&amp;A Consultant</span>
+      <span class="h1-big">Your numbers,<br/><em>finally</em> clear.</span>
+      <span class="h1-sub">I make <strong>complex financials</strong> simple<br/>so you can move faster.</span>
     </h1>
-    <p class="hero-body">
-      From <strong>investor-ready financial models</strong> to <strong>cash flow forecasting</strong>
-      and <strong>business performance analysis</strong> &mdash; I turn complex financials
-      into decisions that move the needle.
-    </p>
+
+    <!-- one-liner divider -->
+    <div class="hero-divider">
+      <span></span>
+      <p>Financial models &middot; Forecasting &middot; Startup finance &middot; CFO-on-demand</p>
+    </div>
+
+    <!-- CTAs -->
     <div class="hero-actions">
-      <a href="https://wa.me/919836665840?text=Hi%20Akshay%2C%20I%27d%20like%20to%20book%20a%20consultation" target="_blank" class="btn-solid">Book a Call</a>
-      <a href="#services" class="btn-outline">View Services</a>
+      <a href="https://wa.me/919836665840?text=Hi%20Akshay%2C%20I%27d%20like%20to%20book%20a%20free%20consultation" target="_blank" class="btn-solid">&#9658;&nbsp; Let&rsquo;s Talk</a>
+      <a href="#services" class="btn-outline">What I do &darr;</a>
     </div>
+
+    <!-- stats -->
     <div class="hero-stats">
-      <div class="stat"><div class="stat-n">8+</div><div class="stat-l">Years FP&amp;A</div></div>
-      <div class="stat"><div class="stat-n">50+</div><div class="stat-l">Models Built</div></div>
-      <div class="stat"><div class="stat-n">CA</div><div class="stat-l">Qualified</div></div>
+      <div class="stat"><div class="stat-n">8+</div><div class="stat-l">Years in Finance</div></div>
+      <div class="stat"><div class="stat-n">50+</div><div class="stat-l">Models Delivered</div></div>
+      <div class="stat"><div class="stat-n">3</div><div class="stat-l">Countries Served</div></div>
     </div>
+
   </div>
 
   <div class="hero-photo-col">
@@ -1316,7 +1411,7 @@ footer {
           </div>
           <div class="cc-text">
             <span class="cc-label">Email</span>
-            <span class="cc-value">ca.akkothari@gmail.com</span>
+            <span class="cc-value"><span class="__cf_email__" data-cfemail="8cefeda2ede7e7e3f8e4edfee5ccebe1ede5e0a2efe3e1">[email&#160;protected]</span></span>
           </div>
         </a>
         <a href="https://wa.me/919836665840" target="_blank" class="card-contact-row">
@@ -1378,7 +1473,7 @@ footer {
           </a>
           <a href="#" class="c-row" id="emailBtn">
             <div class="c-icon gold-bg">@</div>
-            <div class="c-label"><strong>Email</strong><span>ca.akkothari@gmail.com</span></div>
+            <div class="c-label"><strong>Email</strong><span><span class="__cf_email__" data-cfemail="82e1e3ace3e9e9edf6eae3f0ebc2e5efe3ebeeace1edef">[email&#160;protected]</span></span></div>
             <div class="c-arrow">&#8594;</div>
           </a>
           <a href="https://linkedin.com/in/akkothari" class="c-row" target="_blank">
@@ -1433,7 +1528,7 @@ footer {
     </a>
     <a href="#" id="copyEmailBtn" class="em-opt">
       <div class="em-opt-icon badge--copy">CPY</div>
-      <div class="em-opt-text"><strong>Copy Address</strong><span id="copyLbl">ca.akkothari@gmail.com</span></div>
+      <div class="em-opt-text"><strong>Copy Address</strong><span id="copyLbl"><span class="__cf_email__" data-cfemail="1d7e7c337c76767269757c6f745d7a707c7471337e7270">[email&#160;protected]</span></span></div>
     </a>
     <button class="em-close" onclick="closeEmailModal()">&#10005;</button>
   </div>
@@ -1453,7 +1548,7 @@ footer {
   <div class="f-copy">&copy; 2026 Akshay K Kothari. All rights reserved.</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ── NAV ── */
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');}
@@ -1696,6 +1791,4 @@ function closeArticle(){
       <div class="kpi-row"><div class="kpi-num">05</div><div><strong class="kpi-title">LTV:CAC Ratio</strong><span class="kpi-desc">Customer lifetime value divided by acquisition cost. Rule of thumb: 3:1 minimum to have a healthy business. Below 1:1 means you lose money on every customer.</span></div></div>
       <div class="kpi-row"><div class="kpi-num">06</div><div><strong class="kpi-title">CAC Payback Period</strong><span class="kpi-desc">Months to recover your CAC from gross profit per customer. Under 12 months is healthy; under 6 is excellent.</span></div></div>
       <div class="kpi-row"><div class="kpi-num">07</div><div><strong class="kpi-title">MoM Revenue Growth %</strong><span class="kpi-desc">Month-over-month growth rate. For early-stage startups: 10–15% MoM is strong. Know your growth rate alongside absolute numbers.</span></div></div>
-      <div class="kpi-row"><div class="kpi-num">08</div><div><strong class="kpi-title">Churn Rate</strong><span class="kpi-desc">% of revenue or customers lost each month. Even 3% monthly churn = ~30% annually. Track gross and net revenue churn separately.</span></div></div>
-      <div class="kpi-row"><div class="kpi-num">09</div><div><strong class="kpi-title">Operating Cash Flow</strong><span class="kpi-desc">Profit is an opinion; cash is a fact. Positive operating cash flow is the sign of a self-sustaining business.</span></div></div>
-      <div class="kpi-row"><div class="kpi-num">10</div><div><strong class="kpi-title">Burn Multiple
+      <div class="kpi-row"><div class="kpi-num">08</div><div><strong class="kpi-title">Churn Rate</strong><span class="kpi-desc">% of revenue or customers lost each month. Even 3% monthly churn = ~30% annually. Track gross and net revenue churn se
