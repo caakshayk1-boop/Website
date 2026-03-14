@@ -1,14 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="generator" content="HTML5"/>
+<meta name="application-name" content="Akshay K Kothari – Portfolio"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <title>Akshay K Kothari | CA & FP&A Consultant</title>
 <meta name="description" content="Chartered Accountant & FP&A professional. Financial modelling, budgeting, forecasting, and startup finance for businesses across India and the GCC."/>
+<meta name="author" content="Akshay K Kothari"/>
+<meta name="keywords" content="Chartered Accountant, FP&A Consultant, Financial Modelling, Budgeting, Forecasting, Startup Finance, India, GCC, CFO Services, Financial Planning"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#0d2245"/>
+<link rel="canonical" href="https://askakshay.com/"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://askakshay.com/"/>
+<meta property="og:title" content="Akshay K Kothari | CA &amp; FP&amp;A Consultant"/>
+<meta property="og:description" content="Chartered Accountant &amp; FP&amp;A professional. Financial modelling, budgeting, forecasting, and startup finance for businesses across India and the GCC."/>
+<meta property="og:image" content="https://askakshay.com/assets/og-cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Akshay K Kothari – CA &amp; FP&amp;A Consultant"/>
+<meta property="og:locale" content="en_IN"/>
+<meta property="og:site_name" content="Akshay K Kothari"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content="https://askakshay.com/"/>
+<meta name="twitter:title" content="Akshay K Kothari | CA &amp; FP&amp;A Consultant"/>
+<meta name="twitter:description" content="Chartered Accountant &amp; FP&amp;A professional. Financial modelling, budgeting, forecasting, and startup finance for businesses across India and the GCC."/>
+<meta name="twitter:image" content="https://askakshay.com/assets/og-cover.jpg"/>
+<meta name="twitter:image:alt" content="Akshay K Kothari – CA &amp; FP&amp;A Consultant"/>
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Akshay K Kothari",
+  "url": "https://askakshay.com",
+  "image": "https://askakshay.com/assets/akshay-kothari.jpg",
+  "jobTitle": "Chartered Accountant & FP&A Consultant",
+  "description": "CA-qualified FP&A professional with 8+ years of experience in financial modelling, budgeting, forecasting, and startup finance across India and the GCC.",
+  "email": "akshay@askakshay.com",
+  "telephone": "+919836665840",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/akshay-kothari-ca"
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Professional Certification",
+    "name": "Chartered Accountant (CA)",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "Institute of Chartered Accountants of India",
+      "alternateName": "ICAI"
+    }
+  },
+  "knowsAbout": [
+    "Financial Planning & Analysis",
+    "Financial Modelling",
+    "Budgeting & Forecasting",
+    "Startup Finance",
+    "FP&A Consulting",
+    "Management Reporting",
+    "Unit Economics"
+  ],
+  "offers": {
+    "@type": "Service",
+    "name": "FP&A Consulting",
+    "description": "Financial modelling, budgeting, forecasting, and startup finance advisory for businesses across India and the GCC.",
+    "provider": {
+      "@type": "Person",
+      "name": "Akshay K Kothari"
+    }
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
+/* ═══════════════════════════════════════
+   CSS @LAYER — cascade management
+═══════════════════════════════════════ */
+@layer reset, tokens, base, layout, components, utilities, animations, responsive;
+
 /* ═══════════════════════════════════════
    TOKENS
 ═══════════════════════════════════════ */
@@ -27,22 +116,42 @@
   --rule-lt:  #ede8de;
   --navy:     #0d2245;
   --navy-dk:  #071630;
+  /* Spacing scale */
+  --sp-xs: 0.25rem;  --sp-sm: 0.5rem;
+  --sp-md: 1rem;     --sp-lg: 2rem;   --sp-xl: 4rem;
+  /* Type scale */
+  --fs-xs: 0.7rem;   --fs-sm: 0.82rem;
+  --fs-md: 1rem;     --fs-lg: 1.2rem; --fs-xl: 1.5rem;
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --t-fast: 0.15s;   --t-base: 0.25s; --t-slow: 0.5s;
+  /* Radii */
+  --r-sm: 2px; --r-md: 4px; --r-lg: 8px; --r-full: 9999px;
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(11,31,58,.08);
+  --shadow-md: 0 8px 28px rgba(11,31,58,.12);
+  --shadow-lg: 0 24px 64px rgba(11,31,58,.18);
 }
 /* ═══════════════════════════════════════
    RESET & BASE
 ═══════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
 body {
   font-family: "DM Sans", sans-serif;
   background: var(--bg);
   color: var(--ink);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  moz-osx-font-smoothing: grayscale;
 }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 button { font-family: inherit; cursor: pointer; }
+::selection { background: var(--gold-bg); color: var(--navy); }
+/* Utility: screen-reader only */
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.text-balance { text-wrap: balance; }
 
 /* ═══════════════════════════════════════
    TYPOGRAPHY HELPERS
@@ -605,23 +714,121 @@ footer {
 /* ═══════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════ */
+@media (max-width: 1200px) {
+  .hero-outer { grid-template-columns: 1fr 340px; gap: 4rem; }
+  .section-inner { max-width: 960px; }
+}
 @media (max-width: 960px) {
   .hero-outer { grid-template-columns: 1fr; gap: 3rem; padding-top: 7rem; }
   .hero-photo-col { max-width: 380px; }
   .about-grid { grid-template-columns: 1fr; gap: 3rem; align-items: start; }
   .contact-grid { grid-template-columns: 1fr; gap: 3rem; align-items: start; }
   .process-row { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .svc-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 }
 @media (max-width: 768px) {
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .field-row, .fr { grid-template-columns: 1fr; }
+  .hero-h1 { font-size: clamp(2.2rem, 7vw, 3rem); }
+  .section-title { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+  .card-stage { padding: 0 1rem; }
+  .hero-stats { gap: 1.8rem; }
+  .calc-tabs { gap: .35rem; }
+  .calc-tab { padding: .45rem 1rem; font-size: .72rem; }
 }
 @media (max-width: 520px) {
   .section { padding: 4rem 5%; }
   .hero-outer { padding-left: 5%; padding-right: 5%; }
   .process-row { grid-template-columns: 1fr; }
+  .svc-grid { grid-template-columns: 1fr; }
+  .who-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .btn-solid, .btn-outline { width: 100%; justify-content: center; }
 }
+@media (max-width: 380px) {
+  nav { padding: 0 4%; }
+  .section { padding: 3rem 4%; }
+  .hero-outer { padding: 6rem 4% 3rem; }
+  .biz-card { width: 100%; border-radius: 10px; }
+  .who-grid { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════
+   MODERN CSS — MOTION & ACCESSIBILITY
+═══════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ═══════════════════════════════════════
+   MODERN CSS — @SUPPORTS PROGRESSIVE ENHANCEMENT
+═══════════════════════════════════════ */
+@supports (backdrop-filter: blur(12px)) {
+  nav { background: rgba(255,255,255,.88); }
+}
+@supports not (backdrop-filter: blur(12px)) {
+  nav { background: rgba(255,255,255,.98); }
+}
+@supports (container-type: inline-size) {
+  .section-inner { container-type: inline-size; container-name: section; }
+}
+@supports (color: oklch(0% 0 0)) {
+  :root {
+    --gold:    oklch(61% 0.12 80);
+    --gold-lt: oklch(70% 0.13 82);
+    --navy:    oklch(19% 0.06 250);
+  }
+}
+
+/* ═══════════════════════════════════════
+   MODERN CSS — PRINT STYLES
+═══════════════════════════════════════ */
+@media print {
+  nav, .hamburger, .mobile-menu, .hero-actions, #tools, #card { display: none !important; }
+  body { font-size: 12pt; color: #000; background: #fff; }
+  a[href]::after { content: " (" attr(href) ")"; font-size: 10pt; color: #555; }
+  .section { padding: 2rem 0; break-inside: avoid; }
+  .hero-outer { grid-template-columns: 1fr; }
+  .hero-photo-col { display: none; }
+}
+
+/* ═══════════════════════════════════════
+   MODERN CSS — FOCUS VISIBLE (ACCESSIBILITY)
+═══════════════════════════════════════ */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+:focus:not(:focus-visible) { outline: none; }
+
+/* ═══════════════════════════════════════
+   MODERN CSS — SCROLL SNAP (INSIGHTS CARDS)
+═══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .insights-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: .5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) transparent;
+  }
+  .insight-card {
+    flex: 0 0 82vw;
+    scroll-snap-align: start;
+  }
+}
+
 </style>
 </head>
 <body>
