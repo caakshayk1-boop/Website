@@ -12,6 +12,7 @@
 <style>
 /* ═══ BLOOMBERG FINANCIAL TERMINAL DESIGN SYSTEM ═══ */
 :root{
+  /* DARK MODE (default) */
   --bg:#06090F;--bg2:#0D1421;--bg3:#111B2A;--bg4:#162035;
   --orange:#F05023;--orange-hi:#FF6B3D;--orange-lo:#C93F1A;
   --amber:#E8A020;--amber-hi:#FFB740;
@@ -28,13 +29,59 @@
   --r:5px;--r-lg:10px;--r-xl:16px;
   --max:1320px;--pad:clamp(1.5rem,5vw,4rem);
 }
+
+/* ═══ LIGHT MODE OVERRIDES ═══ */
+[data-theme="light"]{
+  --bg:#F4EFE6;--bg2:#FAF6EE;--bg3:#EDE7DB;--bg4:#E5DDD0;
+  --white:#151A1F;
+  --w90:rgba(21,26,31,.9);--w70:rgba(21,26,31,.7);
+  --w50:rgba(21,26,31,.5);--w30:rgba(21,26,31,.3);
+  --w12:rgba(21,26,31,.12);--w07:rgba(21,26,31,.07);--w04:rgba(21,26,31,.04);
+  --glow-o:0 0 24px rgba(240,80,35,.2),0 0 60px rgba(240,80,35,.08);
+  --glow-a:0 0 24px rgba(168,124,40,.2),0 0 60px rgba(168,124,40,.08);
+  --amber:#A87C28;--amber-hi:#C89A3E;
+  --green:#2D5F4B;
+}
+[data-theme="light"] body::before{
+  background-image:linear-gradient(rgba(21,26,31,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(21,26,31,.04) 1px,transparent 1px)}
+[data-theme="light"] body::after{
+  background:radial-gradient(ellipse at 18% 22%,rgba(168,124,40,.06),transparent 50%),
+    radial-gradient(ellipse at 82% 78%,rgba(45,95,75,.04),transparent 50%)}
+[data-theme="light"] nav{background:rgba(244,239,230,.88)}
+[data-theme="light"] nav.scrolled{background:rgba(244,239,230,.97)}
+[data-theme="light"] .hamburger span{background:var(--w50)}
+[data-theme="light"] .mobile-menu{background:rgba(244,239,230,.98)}
+[data-theme="light"] .hero-panel{background:var(--bg2)}
+[data-theme="light"] .panel-hdr{background:var(--bg3)}
+[data-theme="light"] .data-row{background:var(--bg3)}
+[data-theme="light"] .tool-card{background:var(--bg2)}
+[data-theme="light"] .tool-card:hover{background:var(--bg3)}
+[data-theme="light"] .tool-card.featured{background:linear-gradient(135deg,rgba(240,80,35,.08),var(--bg2))}
+[data-theme="light"] .svc-row:hover{background:rgba(21,26,31,.04)}
+[data-theme="light"] .calc-card{background:var(--bg3)}
+[data-theme="light"] .field input{background:var(--bg2)}
+[data-theme="light"] .case-card{background:var(--bg)}
+[data-theme="light"] .case-card:hover{background:var(--bg3)}
+[data-theme="light"] .testi-card{background:var(--bg2)}
+[data-theme="light"] .testi-card:hover{background:var(--bg3)}
+[data-theme="light"] .nl-form-wrap{background:var(--bg3)}
+[data-theme="light"] .biz-card{background:var(--bg2)}
+[data-theme="light"] .bc-head{background:var(--bg3)}
+[data-theme="light"] .bc-row:hover{background:rgba(21,26,31,.04)}
+[data-theme="light"] .bc-actions{background:var(--bg3)}
+[data-theme="light"] footer{background:var(--bg2)}
+[data-theme="light"] .ticker{background:var(--bg3)}
+[data-theme="light"] .calc-nav-item{background:transparent}
+[data-theme="light"] .calc-output{background:var(--bg2)}
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-body{font-family:var(--sans);font-size:16px;line-height:1.55;color:var(--white);background:var(--bg);overflow-x:hidden}
+body{font-family:var(--sans);font-size:16px;line-height:1.55;color:var(--white);background:var(--bg);overflow-x:hidden;transition:background .3s,color .3s}
 a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
-::selection{background:var(--orange);color:var(--white)}
+::selection{background:var(--orange);color:#fff}
 
 /* Animated perspective grid */
 body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
@@ -75,6 +122,10 @@ nav.scrolled{border-bottom-color:var(--w12);background:rgba(6,9,15,.97)}
   font-family:var(--mono);font-size:.67rem;font-weight:700;letter-spacing:.1em;
   text-transform:uppercase;transition:all .25s}
 .nav-cta:hover{background:var(--orange-hi);transform:translateY(-1px);box-shadow:var(--glow-o)}
+.theme-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--w12);
+  display:flex;align-items:center;justify-content:center;color:var(--w50);
+  transition:all .25s;flex-shrink:0}
+.theme-btn:hover{border-color:var(--orange);color:var(--orange)}
 .hamburger{display:none;padding:.5rem;flex-direction:column;gap:5px}
 .hamburger span{display:block;width:20px;height:1.5px;background:var(--w50);border-radius:2px;transition:all .3s}
 .mobile-menu{display:none;position:fixed;top:57px;left:0;right:0;z-index:99;
@@ -516,6 +567,10 @@ footer{background:var(--bg2);border-top:1px solid var(--w07);padding:3rem var(--
     <li><a href="case-zepto.html">Cases</a></li>
   </ul>
   <div class="nav-right">
+    <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+      <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    </button>
     <a href="https://wa.me/919836665840" target="_blank" rel="noopener" class="nav-cta">Let's Talk →</a>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -951,6 +1006,21 @@ footer{background:var(--bg2);border-top:1px solid var(--w07);padding:3rem var(--
 /* NAV */
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20));
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+
+/* THEME TOGGLE */
+const root=document.documentElement;
+const themeBtn=document.getElementById('themeToggle');
+const sunIcon=themeBtn.querySelector('.icon-sun');
+const moonIcon=themeBtn.querySelector('.icon-moon');
+let isDark=localStorage.getItem('theme')!=='light';
+function applyTheme(dark){
+  root.setAttribute('data-theme',dark?'dark':'light');
+  sunIcon.style.display=dark?'none':'block';
+  moonIcon.style.display=dark?'block':'none';
+  localStorage.setItem('theme',dark?'dark':'light');
+}
+applyTheme(isDark);
+themeBtn.addEventListener('click',()=>{isDark=!isDark;applyTheme(isDark)});
 
 /* Live time */
 function updateTime(){
