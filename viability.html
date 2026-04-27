@@ -108,13 +108,13 @@ footer a:hover{color:var(--t2)}
       <div class="sec-lbl">BUSINESS MODEL</div>
       <div class="row2">
         <div class="field"><label>Model type</label><select id="bModel" onchange="calc()"><option value="saas">SaaS / subscription</option><option value="product">Physical product</option><option value="marketplace">Marketplace</option><option value="service">Agency / service</option><option value="media">Media / ads</option></select></div>
-        <div class="field"><label>Currency</label><select id="currency" onchange="calc()"><option value="RM">RM</option><option value="USD">USD</option><option value="SGD">SGD</option></select></div>
+        <div class="field"><label>Currency</label><select id="currency" onchange="calc()"><option value="USD" selected>USD</option><option value="SGD">SGD</option><option value="RM">RM</option><option value="INR">INR</option></select></div>
       </div>
     </div>
     <div class="section">
       <div class="sec-lbl">REVENUE</div>
       <div class="row2">
-        <div class="field"><label>Avg price per unit / mo</label><div class="iw"><span class="ipre" id="cur-pre">RM</span><input type="number" id="price" value="99" min="0" oninput="calc()"></div></div>
+        <div class="field"><label>Avg price per unit / mo</label><div class="iw"><span class="ipre" id="cur-pre">USD</span><input type="number" id="price" value="99" min="0" oninput="calc()"></div></div>
         <div class="field"><label>Customers at launch</label><div class="iw"><input type="number" id="custStart" value="10" min="0" oninput="calc()"></div></div>
       </div>
       <div class="field"><label>Monthly customer growth rate</label><div class="sl-row"><input type="range" min="0" max="50" step="1" value="10" id="growthRate" oninput="syncSl('growthRate','grOut','%');calc()"><span class="sv" id="grOut">10%</span></div></div>
@@ -123,15 +123,15 @@ footer a:hover{color:var(--t2)}
     <div class="section">
       <div class="sec-lbl">UNIT ECONOMICS</div>
       <div class="row2">
-        <div class="field"><label>Cost to acquire 1 customer (CAC)</label><div class="iw"><span class="ipre" id="cur-cac">RM</span><input type="number" id="cac" value="200" min="0" oninput="calc()"></div></div>
+        <div class="field"><label>Cost to acquire 1 customer (CAC)</label><div class="iw"><span class="ipre" id="cur-cac">USD</span><input type="number" id="cac" value="200" min="0" oninput="calc()"></div></div>
         <div class="field"><label>Gross margin</label><div class="sl-row" style="margin-top:4px"><input type="range" min="0" max="100" step="1" value="70" id="margin" oninput="syncSl('margin','marOut','%');calc()"><span class="sv" id="marOut">70%</span></div></div>
       </div>
     </div>
     <div class="section">
       <div class="sec-lbl">COSTS</div>
       <div class="row2">
-        <div class="field"><label>Monthly fixed costs</label><div class="iw"><span class="ipre" id="cur-fix">RM</span><input type="number" id="fixedCost" value="3000" min="0" oninput="calc()"></div></div>
-        <div class="field"><label>Starting capital / runway</label><div class="iw"><span class="ipre" id="cur-cap">RM</span><input type="number" id="capital" value="50000" min="0" oninput="calc()"></div></div>
+        <div class="field"><label>Monthly fixed costs</label><div class="iw"><span class="ipre" id="cur-fix">USD</span><input type="number" id="fixedCost" value="3000" min="0" oninput="calc()"></div></div>
+        <div class="field"><label>Starting capital / runway</label><div class="iw"><span class="ipre" id="cur-cap">USD</span><input type="number" id="capital" value="50000" min="0" oninput="calc()"></div></div>
       </div>
     </div>
     <div class="section">
@@ -168,7 +168,7 @@ let projChart;
 function syncSl(id,outId,suf){document.getElementById(outId).textContent=document.getElementById(id).value+(suf||'')}
 function v(id){return parseFloat(document.getElementById(id).value)||0}
 function iv(id){return parseInt(document.getElementById(id).value)||0}
-function fmt(n){const c=document.getElementById('currency').value;return c+' '+Math.abs(n).toLocaleString('en-MY',{minimumFractionDigits:0,maximumFractionDigits:0})}
+function fmt(n){const c=document.getElementById('currency').value;return c+' '+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0})}
 
 function getInputs(){
   const cur=document.getElementById('currency').value;

@@ -90,8 +90,8 @@ footer a:hover{color:var(--t2)}
     <div class="section">
       <div class="sec-lbl">COMPOUND INTEREST</div>
       <div class="row2">
-        <div class="field"><label>Principal</label><div class="iw"><span class="ipre">RM</span><input type="number" id="ci-p" value="10000" oninput="calcCI()"></div></div>
-        <div class="field"><label>Monthly contribution</label><div class="iw"><span class="ipre">RM</span><input type="number" id="ci-m" value="500" oninput="calcCI()"></div></div>
+        <div class="field"><label>Principal</label><div class="iw"><span class="ipre">$</span><input type="number" id="ci-p" value="10000" oninput="calcCI()"></div></div>
+        <div class="field"><label>Monthly contribution</label><div class="iw"><span class="ipre">$</span><input type="number" id="ci-m" value="500" oninput="calcCI()"></div></div>
       </div>
       <div class="field"><label>Annual interest rate</label><div class="sl-row"><input type="range" min="0.5" max="30" step="0.5" value="8" id="ci-r" oninput="sv('ci-r','ci-rv','%');calcCI()"><span class="sv" id="ci-rv">8%</span></div></div>
       <div class="field"><label>Time horizon</label><div class="sl-row"><input type="range" min="1" max="40" step="1" value="10" id="ci-t" oninput="sv('ci-t','ci-tv',' yrs');calcCI()"><span class="sv" id="ci-tv">10 yrs</span></div></div>
@@ -106,7 +106,7 @@ footer a:hover{color:var(--t2)}
     <div class="section">
       <div class="sec-lbl">LOAN &amp; EMI</div>
       <div class="row2">
-        <div class="field"><label>Loan amount</label><div class="iw"><span class="ipre">RM</span><input type="number" id="l-p" value="300000" oninput="calcLoan()"></div></div>
+        <div class="field"><label>Loan amount</label><div class="iw"><span class="ipre">$</span><input type="number" id="l-p" value="300000" oninput="calcLoan()"></div></div>
         <div class="field"><label>Loan term</label><div class="iw"><input type="number" id="l-t" value="30" oninput="calcLoan()"><span class="isuf">yrs</span></div></div>
       </div>
       <div class="field"><label>Annual interest rate</label><div class="sl-row"><input type="range" min="1" max="20" step="0.1" value="4.5" id="l-r" oninput="sv('l-r','l-rv','%');calcLoan()"><span class="sv" id="l-rv">4.5%</span></div></div>
@@ -121,8 +121,8 @@ footer a:hover{color:var(--t2)}
     <div class="section">
       <div class="sec-lbl">CAGR &amp; INVESTMENT RETURNS</div>
       <div class="row2">
-        <div class="field"><label>Starting value</label><div class="iw"><span class="ipre">RM</span><input type="number" id="cg-s" value="10000" oninput="calcCAGR()"></div></div>
-        <div class="field"><label>Ending value</label><div class="iw"><span class="ipre">RM</span><input type="number" id="cg-e" value="32000" oninput="calcCAGR()"></div></div>
+        <div class="field"><label>Starting value</label><div class="iw"><span class="ipre">$</span><input type="number" id="cg-s" value="10000" oninput="calcCAGR()"></div></div>
+        <div class="field"><label>Ending value</label><div class="iw"><span class="ipre">$</span><input type="number" id="cg-e" value="32000" oninput="calcCAGR()"></div></div>
       </div>
       <div class="field"><label>Number of years</label><div class="sl-row"><input type="range" min="1" max="30" step="1" value="10" id="cg-t" oninput="sv('cg-t','cg-tv',' yrs');calcCAGR()"><span class="sv" id="cg-tv">10 yrs</span></div></div>
       <div class="field"><label>Benchmark to compare (e.g. FD rate)</label><div class="sl-row"><input type="range" min="0" max="15" step="0.5" value="4" id="cg-b" oninput="sv('cg-b','cg-bv','%');calcCAGR()"><span class="sv" id="cg-bv">4%</span></div></div>
@@ -135,7 +135,7 @@ footer a:hover{color:var(--t2)}
     <div class="section">
       <div class="sec-lbl">RULE OF 72 &amp; DOUBLING TIME</div>
       <div class="field"><label>Annual return rate</label><div class="sl-row"><input type="range" min="0.5" max="30" step="0.5" value="8" id="r72-r" oninput="sv('r72-r','r72-rv','%');calcR72()"><span class="sv" id="r72-rv">8%</span></div></div>
-      <div class="field"><label>Starting amount</label><div class="iw"><span class="ipre">RM</span><input type="number" id="r72-p" value="10000" oninput="calcR72()"></div></div>
+      <div class="field"><label>Starting amount</label><div class="iw"><span class="ipre">$</span><input type="number" id="r72-p" value="10000" oninput="calcR72()"></div></div>
       <div class="field"><label>Number of doublings to simulate</label><div class="sl-row"><input type="range" min="1" max="8" step="1" value="4" id="r72-d" oninput="sv('r72-d','r72-dv',' ×');calcR72()"><span class="sv" id="r72-dv">4 ×</span></div></div>
     </div>
     <div class="result-box" id="r72-result"></div>
@@ -145,7 +145,7 @@ footer a:hover{color:var(--t2)}
   <div class="panel" id="p-inflation">
     <div class="section">
       <div class="sec-lbl">INFLATION EROSION</div>
-      <div class="field"><label>Today's amount</label><div class="iw"><span class="ipre">RM</span><input type="number" id="inf-p" value="100000" oninput="calcInflation()"></div></div>
+      <div class="field"><label>Today's amount</label><div class="iw"><span class="ipre">$</span><input type="number" id="inf-p" value="100000" oninput="calcInflation()"></div></div>
       <div class="field"><label>Annual inflation rate</label><div class="sl-row"><input type="range" min="0.5" max="15" step="0.5" value="3.5" id="inf-r" oninput="sv('inf-r','inf-rv','%');calcInflation()"><span class="sv" id="inf-rv">3.5%</span></div></div>
       <div class="field"><label>Time horizon</label><div class="sl-row"><input type="range" min="1" max="40" step="1" value="20" id="inf-t" oninput="sv('inf-t','inf-tv',' yrs');calcInflation()"><span class="sv" id="inf-tv">20 yrs</span></div></div>
       <div class="field"><label>Required return to beat inflation</label><div class="sl-row"><input type="range" min="0" max="15" step="0.5" value="6" id="inf-req" oninput="sv('inf-req','inf-reqv','%');calcInflation()"><span class="sv" id="inf-reqv">6%</span></div></div>
@@ -163,11 +163,11 @@ footer a:hover{color:var(--t2)}
         <div class="field"><label>Retirement age</label><div class="iw"><input type="number" id="rt-ret" value="60" oninput="calcRetire()"><span class="isuf">yrs</span></div></div>
       </div>
       <div class="row2">
-        <div class="field"><label>Current savings</label><div class="iw"><span class="ipre">RM</span><input type="number" id="rt-save" value="50000" oninput="calcRetire()"></div></div>
-        <div class="field"><label>Monthly contribution</label><div class="iw"><span class="ipre">RM</span><input type="number" id="rt-contrib" value="1500" oninput="calcRetire()"></div></div>
+        <div class="field"><label>Current savings</label><div class="iw"><span class="ipre">$</span><input type="number" id="rt-save" value="50000" oninput="calcRetire()"></div></div>
+        <div class="field"><label>Monthly contribution</label><div class="iw"><span class="ipre">$</span><input type="number" id="rt-contrib" value="1500" oninput="calcRetire()"></div></div>
       </div>
       <div class="field"><label>Expected annual return</label><div class="sl-row"><input type="range" min="1" max="20" step="0.5" value="7" id="rt-r" oninput="sv('rt-r','rt-rv','%');calcRetire()"><span class="sv" id="rt-rv">7%</span></div></div>
-      <div class="field"><label>Monthly income needed in retirement</label><div class="iw"><span class="ipre">RM</span><input type="number" id="rt-need" value="5000" oninput="calcRetire()"></div></div>
+      <div class="field"><label>Monthly income needed in retirement</label><div class="iw"><span class="ipre">$</span><input type="number" id="rt-need" value="5000" oninput="calcRetire()"></div></div>
       <div class="field"><label>Inflation rate</label><div class="sl-row"><input type="range" min="0.5" max="10" step="0.5" value="3" id="rt-inf" oninput="sv('rt-inf','rt-infv','%');calcRetire()"><span class="sv" id="rt-infv">3%</span></div></div>
     </div>
     <div class="result-box" id="rt-result"></div>
@@ -182,7 +182,7 @@ footer a:hover{color:var(--t2)}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const charts={};
-const fmt=(n,pre='RM')=>pre+' '+Math.abs(n).toLocaleString('en-MY',{minimumFractionDigits:0,maximumFractionDigits:0});
+const fmt=(n,pre='USD')=>pre+' '+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0});
 function sv(id,outId,suf){document.getElementById(outId).textContent=document.getElementById(id).value+(suf||'')}
 function v(id){return parseFloat(document.getElementById(id).value)||0}
 function iv(id){return parseInt(document.getElementById(id).value)||0}

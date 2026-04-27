@@ -92,8 +92,8 @@ footer a:hover{color:var(--t2)}
   <div class="section">
     <div class="sec-lbl">DISCOUNT RATE & INITIAL INVESTMENT</div>
     <div class="row2">
-      <div class="field"><label>Initial investment (Year 0)</label><div class="iw"><span class="ipre" id="cur-inv">RM</span><input type="number" id="initialInv" value="100000" min="0" oninput="calc()"></div></div>
-      <div class="field"><label>Currency</label><select id="currency" onchange="updateCurrency();calc()"><option value="RM">RM</option><option value="USD">USD</option><option value="SGD">SGD</option></select></div>
+      <div class="field"><label>Initial investment (Year 0)</label><div class="iw"><span class="ipre" id="cur-inv">USD</span><input type="number" id="initialInv" value="100000" min="0" oninput="calc()"></div></div>
+      <div class="field"><label>Currency</label><select id="currency" onchange="updateCurrency();calc()"><option value="USD" selected>USD</option><option value="SGD">SGD</option><option value="RM">RM</option><option value="INR">INR</option></select></div>
     </div>
     <div class="field"><label>Discount rate (WACC / required return)</label>
       <div class="sl-row"><input type="range" min="0.5" max="30" step="0.5" value="10" id="discRate" oninput="syncSl('discRate','drOut','%');calc()"><span class="sv" id="drOut">10%</span></div>
@@ -108,7 +108,7 @@ footer a:hover{color:var(--t2)}
     <div class="sec-lbl">ANNUAL CASH FLOWS</div>
     <div class="cashflow-rows" id="cfRows"></div>
     <div class="add-cf-row">
-      <div class="iw" style="flex:1"><span class="ipre" id="cur-new">RM</span><input type="number" id="newCF" placeholder="New cash flow..." oninput=""></div>
+      <div class="iw" style="flex:1"><span class="ipre" id="cur-new">USD</span><input type="number" id="newCF" placeholder="New cash flow..." oninput=""></div>
       <button class="btn sm" onclick="addCF()">+ Add year</button>
       <button class="btn sm" onclick="removeCF()">− Year</button>
     </div>
@@ -145,7 +145,7 @@ let cashFlows=[50000,60000,70000,80000,90000];
 let npvChart;
 function syncSl(id,outId,suf){document.getElementById(outId).textContent=document.getElementById(id).value+(suf||'')}
 function v(id){return parseFloat(document.getElementById(id).value)||0}
-function fmt(n){const c=document.getElementById('currency').value;return c+' '+Math.round(Math.abs(n)).toLocaleString('en-MY',{minimumFractionDigits:0,maximumFractionDigits:0})}
+function fmt(n){const c=document.getElementById('currency').value;return c+' '+Math.round(Math.abs(n)).toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0})}
 function updateCurrency(){const c=document.getElementById('currency').value;['cur-inv','cur-new'].forEach(id=>{const el=document.getElementById(id);if(el)el.textContent=c})}
 
 function calcNPV(flows,inv,rate){
@@ -210,7 +210,7 @@ function buildResult(){
       <div class="stat"><div class="stat-lbl">CASH MULTIPLE</div><div class="stat-val ${multiple>=2?'good':multiple>=1?'warn':'bad'}">${multiple.toFixed(2)}×</div></div>
     </div>
     <div class="insight">
-      ${isPos?`This investment <span>creates RM ${Math.round(Math.abs(npv)).toLocaleString('en-MY')}</span> of value at a <span>${rate}% discount rate</span>.`:`This investment <span>destroys RM ${Math.round(Math.abs(npv)).toLocaleString('en-MY')}</span> of value at a <span>${rate}% discount rate</span>.`}
+      ${isPos?`This investment <span>creates ${document.getElementById('currency').value} ${Math.round(Math.abs(npv)).toLocaleString('en-US')}</span> of value at a <span>${rate}% discount rate</span>.`:`This investment <span>destroys ${document.getElementById('currency').value} ${Math.round(Math.abs(npv)).toLocaleString('en-US')}</span> of value at a <span>${rate}% discount rate</span>.`}
       The IRR of <span>${irr.toFixed(1)}%</span> is <span>${irr>=rate?'above':'below'}</span> your required return — meaning this investment ${irr>=rate?'clears':'fails'} your hurdle rate.
       ${cashFlows.length>=2?`The terminal value adds <span>${fmt(tvPV)}</span> (assuming ${tg}% perpetuity growth), bringing total NPV to <span>${npvWithTV>=0?'+':'−'}${fmt(Math.abs(npvWithTV))}</span>.`:''}
     </div>`
