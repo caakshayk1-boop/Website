@@ -164,7 +164,7 @@ function getStrengths(){return DIMS.map(d=>({name:d.name,score:dimScore(d.id)}))
 function buildVerdict(){
   const name=document.getElementById('companyName').value||'Unnamed company';
   const total=totalScore(),moat=getMoat(total),strengths=getStrengths();
-  const now=new Date().toLocaleDateString('en-MY',{day:'numeric',month:'short',year:'numeric'});
+  const now=new Date().toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'});
   const circ=Math.PI*2*44,pct=total/100;
   const scoreColor=total>=70?'#3fb950':total>=45?'#E8673A':'#f85149';
   const dimBars=DIMS.map(d=>{const s=dimScore(d.id);return`<div class="dbar-row"><div class="dbar-lbl">${d.name.split(' ')[0]}</div><div class="dbar-track"><div class="dbar-fill" style="width:${s}%"></div></div><div class="dbar-val">${s}</div></div>`}).join('');
@@ -186,7 +186,7 @@ function switchTab(t){
 function saveCard(){
   const name=document.getElementById('companyName').value||'Unnamed company';
   const saved=JSON.parse(localStorage.getItem('aa_moat_saved')||'[]');
-  saved.unshift({name,total:totalScore(),moat:getMoat(totalScore()).label,mclass:getMoat(totalScore()).cls,dims:DIMS.map(d=>({id:d.id,name:d.name,score:dimScore(d.id)})),scores:JSON.parse(JSON.stringify(scores)),date:new Date().toLocaleDateString('en-MY',{day:'numeric',month:'short',year:'numeric'}),id:Date.now()});
+  saved.unshift({name,total:totalScore(),moat:getMoat(totalScore()).label,mclass:getMoat(totalScore()).cls,dims:DIMS.map(d=>({id:d.id,name:d.name,score:dimScore(d.id)})),scores:JSON.parse(JSON.stringify(scores)),date:new Date().toLocaleDateString('en-US',{day:'numeric',month:'short',year:'numeric'}),id:Date.now()});
   localStorage.setItem('aa_moat_saved',JSON.stringify(saved.slice(0,20)));
   alert(`"${name}" saved to your scorecard library.`)
 }
