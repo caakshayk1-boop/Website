@@ -442,10 +442,12 @@ nav.scrolled{border-bottom-color:var(--w12);background:rgba(6,9,15,.97)}
   display:grid;grid-template-columns:44px 1fr;gap:1rem;font-size:.9rem;color:var(--w70)}
 .nl-list li span{font-family:var(--mono);font-size:.62rem;color:var(--orange);
   letter-spacing:.1em;padding-top:.15rem}
-.nl-form-wrap{background:var(--bg3);border:1px solid var(--w07);border-radius:var(--r-lg);padding:2rem}
-.nl-form-wrap h3{font-family:var(--display);font-size:1.5rem;letter-spacing:-.015em;
+.nl-form-wrap{background:var(--bg3);border:1px solid var(--w07);border-radius:var(--r-lg);padding:2rem;display:flex;flex-direction:column;gap:0}
+.nl-form-header h3{font-family:var(--display);font-size:1.5rem;letter-spacing:-.015em;
   color:var(--white);margin-bottom:.5rem}
-.nl-form-wrap>p{font-size:.85rem;color:var(--w50);margin-bottom:1.5rem}
+.nl-form-header p{font-size:.85rem;color:var(--w50);margin-bottom:1.2rem}
+.nl-embed-shell{border-radius:6px;overflow:hidden;background:transparent;margin-bottom:.8rem;min-height:180px}
+.nl-embed-shell iframe{display:block!important;border:none!important;background:transparent!important}
 .nl-form{display:flex;border:1px solid var(--w12);border-radius:3px;overflow:hidden;margin-bottom:.8rem}
 .nl-form input[type="email"]{flex:1;background:transparent;border:none;
   padding:1rem 1.2rem;color:var(--white);font-family:var(--sans);font-size:.9rem;outline:none}
@@ -691,46 +693,46 @@ footer{background:var(--bg2);border-top:1px solid var(--w07);padding:3rem var(--
   <div class="section-inner">
     <div class="section-hdr reveal">
       <div>
-        <div class="section-eyebrow">§ 01 — Free Downloads</div>
+        <div class="section-eyebrow">§ 01 — Free Tools</div>
         <h2 class="section-h2">Tools that do the <em>thinking</em> before you spend.</h2>
         <p class="section-sub">Battle-tested in corporate finance. Built for founders and finance teams who'd rather see the answer than guess it. The best tool is gated — subscribe to unlock.</p>
       </div>
     </div>
     <div class="tools-grid">
       <div class="tool-card featured reveal">
-        <div class="tc-head"><div class="tc-num">01 / 05</div><span class="tc-badge hot">Most Downloaded</span></div>
+        <div class="tc-head"><div class="tc-num">01 / 05</div><span class="tc-badge hot">Most Used</span></div>
         <h3 class="tc-title">Business Viability Calculator</h3>
-        <p class="tc-desc">Break-even engine, 12-month runway, Green/Amber/Red verdict. Know if your idea makes money — before you spend a rupee.</p>
-        <div class="tc-tags"><span class="tc-tag">Break-Even</span><span class="tc-tag">Runway</span><span class="tc-tag">Excel · 5 Tabs</span></div>
-        <div class="tc-foot"><span class="tc-meta">.xlsx · Free</span><button class="tc-btn solid" onclick="downloadViabilityCalc()">Download ↓</button></div>
+        <p class="tc-desc">Break-even point, 12-month runway, unit economics, and a Green/Amber/Red verdict. Know if your idea makes money before you spend a dollar.</p>
+        <div class="tc-tags"><span class="tc-tag">Break-Even</span><span class="tc-tag">Runway</span><span class="tc-tag">LTV · CAC</span></div>
+        <div class="tc-foot"><span class="tc-meta">Browser · Free</span><a class="tc-btn solid" href="viability.html">Open Tool ↗</a></div>
       </div>
       <div class="tool-card reveal reveal-delay-1">
         <div class="tc-head"><div class="tc-num">02 / 05</div><span class="tc-badge free">Free</span></div>
-        <h3 class="tc-title">NPV &amp; ROI Investment Calculator</h3>
-        <p class="tc-desc">5-year P&L, NPV, IRR, MIRR, sensitivity tables, and a decisive Invest / Do Not Invest verdict sheet.</p>
-        <div class="tc-tags"><span class="tc-tag">NPV · IRR · MIRR</span><span class="tc-tag">Excel · 7 Sheets</span></div>
-        <div class="tc-foot"><span class="tc-meta">.xlsx · Free</span><button class="tc-btn solid" onclick="downloadNPVCalc()">Download ↓</button></div>
+        <h3 class="tc-title">NPV &amp; Investment Calculator</h3>
+        <p class="tc-desc">Multi-year cash flow analysis, NPV, IRR, payback period, and a live Invest / Pass verdict. Works for any investment or project.</p>
+        <div class="tc-tags"><span class="tc-tag">NPV · IRR</span><span class="tc-tag">Payback</span><span class="tc-tag">Live Chart</span></div>
+        <div class="tc-foot"><span class="tc-meta">Browser · Free</span><a class="tc-btn solid" href="npv.html">Open Tool ↗</a></div>
       </div>
       <div class="tool-card reveal reveal-delay-2">
         <div class="tc-head"><div class="tc-num">03 / 05</div><span class="tc-badge free">Free</span></div>
         <h3 class="tc-title">Moat Scorecard</h3>
-        <p class="tc-desc">Score any business across five dimensions of durable advantage. Browser-based, live verdict. No login required.</p>
-        <div class="tc-tags"><span class="tc-tag">Interactive</span><span class="tc-tag">Browser Tool</span></div>
-        <div class="tc-foot"><span class="tc-meta">No download</span><a class="tc-btn solid" href="moat-scorecard.html">Open Tool ↗</a></div>
+        <p class="tc-desc">Score any business across five dimensions of durable competitive advantage. Live weighted verdict. No login required.</p>
+        <div class="tc-tags"><span class="tc-tag">Interactive</span><span class="tc-tag">Competitive Analysis</span></div>
+        <div class="tc-foot"><span class="tc-meta">Browser · Free</span><a class="tc-btn solid" href="moat.html">Open Tool ↗</a></div>
       </div>
       <div class="tool-card reveal">
-        <div class="tc-head"><div class="tc-num">04 / 05</div><span class="tc-badge gated">Subscribers Only</span></div>
-        <h3 class="tc-title">Startup Financial Model Template</h3>
-        <p class="tc-desc">Driver-based 3-statement model, cohort analysis, CAC/LTV, and investor-ready output. The template I build for consulting clients — free for subscribers.</p>
-        <div class="tc-tags"><span class="tc-tag">3-Statement</span><span class="tc-tag">Cohorts</span><span class="tc-tag">Excel · 9 Tabs</span></div>
-        <div class="tc-foot"><span class="tc-meta">Subscribe to unlock</span><a href="#newsletter" class="tc-btn amber-btn">Get Access ↗</a></div>
+        <div class="tc-head"><div class="tc-num">04 / 05</div><span class="tc-badge free">Free</span></div>
+        <h3 class="tc-title">Finance Calculators</h3>
+        <p class="tc-desc">Compound interest, loan EMI, CAGR, Rule of 72, inflation, and retirement planning — six calculators in one place.</p>
+        <div class="tc-tags"><span class="tc-tag">Compound Interest</span><span class="tc-tag">Loan · CAGR</span><span class="tc-tag">Retirement</span></div>
+        <div class="tc-foot"><span class="tc-meta">Browser · Free</span><a class="tc-btn solid" href="calculators.html">Open Tool ↗</a></div>
       </div>
       <div class="tool-card reveal reveal-delay-1">
-        <div class="tc-head"><div class="tc-num">05 / 05</div><span class="tc-badge soon">Coming Soon</span></div>
-        <h3 class="tc-title">90-Day Cash Flow Planner</h3>
-        <p class="tc-desc">Scenario-based monthly projections. See best, base, and worst case before the quarter begins.</p>
-        <div class="tc-tags"><span class="tc-tag">3 Scenarios</span><span class="tc-tag">Monthly</span></div>
-        <div class="tc-foot"><span class="tc-meta">In development</span><a href="https://wa.me/919836665840?text=Early%20access%20for%20Cash%20Flow%20Planner" target="_blank" class="tc-btn outline">Notify Me</a></div>
+        <div class="tc-head"><div class="tc-num">05 / 05</div><span class="tc-badge free">Free</span></div>
+        <h3 class="tc-title">90-Day Cash Flow Tracker</h3>
+        <p class="tc-desc">Log income and expenses, visualise your 90-day cash position, and track net balance in real time. No spreadsheet needed.</p>
+        <div class="tc-tags"><span class="tc-tag">Cash Tracking</span><span class="tc-tag">Live Chart</span><span class="tc-tag">90-Day View</span></div>
+        <div class="tc-foot"><span class="tc-meta">Browser · Free</span><a class="tc-btn solid" href="cashflow.html">Open Tool ↗</a></div>
       </div>
     </div>
   </div>
@@ -934,10 +936,14 @@ footer{background:var(--bg2);border-top:1px solid var(--w07);padding:3rem var(--
         </ul>
       </div>
       <div class="nl-form-wrap">
-        <h3>Join <em style="font-style:italic;color:var(--orange)">Margin Notes</em></h3>
-        <p>No fluff · No AI filler · No spam · Unsubscribe any time</p>
-        <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
-        <iframe src="https://subscribe-forms.beehiiv.com/f0772f91-6a07-4185-bf0b-e1637abe0abf" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;max-width:500px;height:320px;border:none;background:transparent;display:block;margin:0 auto;"></iframe>
+        <div class="nl-form-header">
+          <h3>Join <em style="font-style:italic;color:var(--orange)">Margin Notes</em></h3>
+          <p>No fluff · No AI filler · No spam · Unsubscribe any time</p>
+        </div>
+        <div class="nl-embed-shell">
+          <script async src="https://subscribe-forms.beehiiv.com/embed.js"></script>
+          <iframe src="https://subscribe-forms.beehiiv.com/f0772f91-6a07-4185-bf0b-e1637abe0abf" class="beehiiv-embed" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="width:100%;height:200px;border:none;background:transparent;display:block;border-radius:4px;overflow:hidden;"></iframe>
+        </div>
         <div class="nl-micro">Free forever · Every Monday · 7am IST</div>
       </div>
     </div>
@@ -1029,7 +1035,7 @@ footer{background:var(--bg2);border-top:1px solid var(--w07);padding:3rem var(--
     </div>
     <div class="foot-col">
       <h4>Tools</h4>
-      <a href="moat-scorecard.html">Moat Scorecard</a>
+      <a href="moat.html">Moat Scorecard</a>
       <a href="#tools">Viability Calc</a>
       <a href="#tools">NPV Calculator</a>
       <a href="#calculators">Live Calculators</a>
